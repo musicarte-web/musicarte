@@ -1,0 +1,1 @@
+const btn=document.querySelector('.menu-btn');const nav=document.querySelector('nav');if(btn&&nav)btn.addEventListener('click',()=>nav.classList.toggle('open'));setTimeout(()=>document.querySelectorAll('.messages').forEach(x=>x.remove()),3500);
