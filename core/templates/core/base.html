@@ -1,216 +1,37 @@
 {% load static %}
-
 <!doctype html>
 <html lang="pt-br">
-
 <head>
-    <meta charset="utf-8">
-
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1"
-    >
-
-    <title>
-        {% block title %}Musicarte{% endblock %}
-    </title>
-
-    <!-- FONTES -->
-    <link
-        rel="preconnect"
-        href="https://fonts.googleapis.com"
-    >
-
-    <link
-        rel="preconnect"
-        href="https://fonts.gstatic.com"
-        crossorigin
-    >
-
-    <link
-        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap"
-        rel="stylesheet"
-    >
-
-    <!-- CSS DO MUSICARTE -->
-    <link
-        rel="stylesheet"
-        href="{% static 'core/css/style.css' %}?v=2"
-    >
-
-    <!-- JAVASCRIPT -->
-    <script
-        defer
-        src="{% static 'core/js/main.js' %}"
-    ></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Musicarte — projeto de extensão do IFPR Campus Paranavaí. Arte, cultura e comunidade desde 2012.">
+  <title>{% block title %}Musicarte{% endblock %}</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{% static 'core/css/style.css' %}?v=6">
+  <script defer src="{% static 'core/js/main.js' %}?v=2"></script>
 </head>
-
-
 <body>
-
-    <!-- ==================================================
-         CABEÇALHO
-         ================================================== -->
-
-    <header class="site-header">
-
-        <!-- LOGO -->
-        <a
-            class="brand"
-            href="{% url 'home' %}"
-        >
-            <span class="brand-mark">
-                M
-            </span>
-
-            <span>
-                Music<span>arte</span>
-            </span>
-        </a>
-
-
-        <!-- BOTÃO DO MENU NO CELULAR -->
-        <button
-            class="menu-btn"
-            aria-label="Abrir menu"
-        >
-            ☰
-        </button>
-
-
-        <!-- MENU -->
-        <nav>
-
-            <a href="{% url 'home' %}">
-                Início
-            </a>
-
-            <a href="{% url 'sobre' %}">
-                Sobre
-            </a>
-
-            <a href="{% url 'cursos' %}">
-                Oficinas
-            </a>
-
-            <a href="{% url 'eventos' %}">
-                Eventos
-            </a>
-
-            <a href="{% url 'galeria' %}">
-                Galeria
-            </a>
-
-            <a href="{% url 'equipe' %}">
-                Equipe
-            </a>
-
-
-            {% if user.is_authenticated %}
-
-                <a
-                    class="nav-pill"
-                    href="{% url 'painel' %}"
-                >
-                    Painel
-                </a>
-
-            {% else %}
-
-                <a
-                    class="nav-pill"
-                    href="{% url 'login' %}"
-                >
-                    Entrar
-                </a>
-
-            {% endif %}
-
-        </nav>
-
-    </header>
-
-
-    <!-- ==================================================
-         MENSAGENS DO DJANGO
-         ================================================== -->
-
-    {% if messages %}
-
-        <div class="messages">
-
-            {% for message in messages %}
-
-                <div>
-                    {{ message }}
-                </div>
-
-            {% endfor %}
-
-        </div>
-
-    {% endif %}
-
-
-    <!-- ==================================================
-         CONTEÚDO DAS PÁGINAS
-         ================================================== -->
-
-    <main>
-
-        {% block content %}
-
-        {% endblock %}
-
-    </main>
-
-
-    <!-- ==================================================
-         RODAPÉ
-         ================================================== -->
-
-    <footer>
-
-        <div>
-
-            <div class="brand footer-brand">
-
-                <span class="brand-mark">
-                    M
-                </span>
-
-                <span>
-                    Music<span>arte</span>
-                </span>
-
-            </div>
-
-            <p>
-                Arte, educação e comunidade no
-                IFPR — Campus Paranavaí.
-            </p>
-
-        </div>
-
-
-        <div>
-
-            <strong>
-                Musicarte
-            </strong>
-
-            <p>
-                Transformando Vidas
-            </p>
-
-            <p>
-                Projeto de extensão • desde 2012
-            </p>
-
-        </div>
-
-    </footer>
-
-</body>
-
-</html>
+<header class="site-header">
+  <a class="brand" href="{% url 'home' %}" aria-label="Musicarte - início">
+    <span class="brand-symbol" aria-hidden="true"><i></i><b></b><em></em></span>
+    <span class="brand-name">music<span>arte</span></span>
+  </a>
+  <button class="menu-btn" aria-label="Abrir menu" aria-expanded="false">☰</button>
+  <nav class="main-nav">
+    <a href="{% url 'home' %}">Início</a><a href="{% url 'sobre' %}">Sobre</a><a href="{% url 'cursos' %}">Oficinas</a><a href="{% url 'eventos' %}">Eventos</a><a href="{% url 'galeria' %}">Galeria</a><a href="{% url 'equipe' %}">Equipe</a>
+    {% if user.is_authenticated %}<a class="nav-pill" href="{% url 'painel' %}">Painel</a>{% else %}<a class="nav-pill" href="{% url 'login' %}">Entrar</a>{% endif %}
+  </nav>
+</header>
+{% if messages %}<div class="messages">{% for message in messages %}<div>{{ message }}</div>{% endfor %}</div>{% endif %}
+<main>{% block content %}{% endblock %}</main>
+<footer class="site-footer">
+  <div class="footer-main">
+    <div><a class="brand brand-footer" href="{% url 'home' %}"><span class="brand-symbol"><i></i><b></b><em></em></span><span class="brand-name">music<span>arte</span></span></a><p>Arte, educação e comunidade no IFPR — Campus Paranavaí.</p></div>
+    <div class="footer-links"><strong>Explore</strong><a href="{% url 'sobre' %}">Sobre</a><a href="{% url 'cursos' %}">Oficinas</a><a href="{% url 'eventos' %}">Eventos</a><a href="{% url 'galeria' %}">Galeria</a></div>
+    <div class="ifpr-sign"><strong>INSTITUTO FEDERAL</strong><span>Paraná</span><small>Campus Paranavaí</small></div>
+  </div>
+  <div class="footer-bottom"><span>Projeto de extensão • desde 2012</span><span>Musicarte • Transformando vidas pela arte</span></div>
+</footer>
+</body></html>
