@@ -1,0 +1,18 @@
+from django.contrib import admin
+from .models import *
+@admin.register(Aluno)
+class AlunoAdmin(admin.ModelAdmin): list_display=('nome','email','telefone'); search_fields=('nome','email')
+@admin.register(Instrutor)
+class InstrutorAdmin(admin.ModelAdmin): list_display=('nome','especialidade','ativo'); list_filter=('ativo',); search_fields=('nome','especialidade')
+@admin.register(Curso)
+class CursoAdmin(admin.ModelAdmin): list_display=('nome','instrutor','horario','vagas','ativo'); list_filter=('ativo',); search_fields=('nome',)
+@admin.register(Matricula)
+class MatriculaAdmin(admin.ModelAdmin): list_display=('aluno','curso','status','data_matricula'); list_filter=('status','curso')
+@admin.register(Aula)
+class AulaAdmin(admin.ModelAdmin): list_display=('curso','tema','data'); list_filter=('curso','data')
+@admin.register(Frequencia)
+class FrequenciaAdmin(admin.ModelAdmin): list_display=('matricula','aula','presente'); list_filter=('presente','aula__curso')
+@admin.register(Evento)
+class EventoAdmin(admin.ModelAdmin): list_display=('titulo','data','local','publicado'); list_filter=('publicado',)
+@admin.register(Midia)
+class MidiaAdmin(admin.ModelAdmin): list_display=('titulo','data','publicada'); list_filter=('publicada',)
