@@ -16,3 +16,33 @@
 .site-footer{padding:52px max(24px,calc((100% - 1120px)/2)) 22px;background:#121022;color:#fff}.footer-main{display:grid;grid-template-columns:1.5fr .7fr .8fr;gap:55px}.brand-footer .brand-name{color:#fff}.brand-footer .brand-name span{color:#ff8994}.footer-main p{max-width:350px;color:#aaa5b8;line-height:1.6}.footer-links{display:flex;flex-direction:column;gap:9px;font-size:13px}.footer-links strong{margin-bottom:4px}.footer-links a{color:#bcb7c8}.ifpr-sign{border-left:1px solid #393548;padding-left:25px;display:flex;flex-direction:column;justify-content:center}.ifpr-sign strong{font-size:13px;letter-spacing:.04em}.ifpr-sign span{color:#ddd9e5}.ifpr-sign small{color:#9691a5}.footer-bottom{margin-top:38px;padding-top:18px;border-top:1px solid #2c283a;display:flex;justify-content:space-between;color:#777184;font-size:10px}
 @media(max-width:900px){.main-nav{display:none;position:absolute;left:18px;right:18px;top:67px;padding:18px;background:#fff;border:1px solid var(--line);border-radius:15px;box-shadow:var(--shadow);flex-direction:column;align-items:stretch}.main-nav.open{display:flex}.menu-btn{display:block}.home-hero,.inner-hero,.story,.coordination,.course-detail-grid{grid-template-columns:1fr}.home-hero{gap:25px}.hero-copy{text-align:center}.hero-copy>p{margin-inline:auto}.hero-actions{justify-content:center}.art-strip{grid-template-columns:repeat(2,1fr)}.workshop-grid,.team-grid{grid-template-columns:repeat(2,1fr)}.home-duo{grid-template-columns:1fr}.event-card{grid-template-columns:90px 1fr}.event-card>img,.event-art{display:none}.person-card.featured{grid-column:1/-1}.footer-main{grid-template-columns:1fr 1fr}.ifpr-sign{border-left:0;padding-left:0}.gallery-grid{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:600px){.shell{width:min(100% - 36px,1180px)}.site-header{height:66px;padding-inline:18px}.home-hero{padding-block:42px}.hero-copy h1,.page-intro h1,.inner-hero h1{font-size:47px}.hero-actions{flex-direction:column}.hero-actions .btn{width:100%}.hero-visual{height:330px}.hero-photo-placeholder{height:300px}.mini-logo .brand-name{font-size:31px}.blob.yellow{width:115px;height:90px}.blob.coral{width:105px;height:105px}.blob.aqua{width:75px;height:60px}.scribble{font-size:13px;right:-2px}.art-strip{padding-inline:10px}.home-section,.listing{padding:62px 18px}.workshop-grid,.team-grid,.gallery-grid{grid-template-columns:1fr}.home-duo{width:calc(100% - 36px);padding-bottom:65px}.event-teaser,.about-teaser{padding:28px}.about-teaser{grid-template-columns:1fr}.about-shape{height:120px}.inner-hero{padding-block:55px}.history-art{height:250px}.story,.coordination{padding:65px 20px;gap:40px}.areas-list{padding:0 20px 65px}.areas-list>div{grid-template-columns:50px 1fr}.areas-list h3{font-size:29px}.coord-photo img{height:410px}.event-card{grid-template-columns:72px 1fr}.event-content{padding:20px}.event-content h2{font-size:25px}.person-card.featured{display:block}.person-card.featured img{height:330px}.course-detail{padding:40px 18px 65px}.course-detail-image{height:380px}.facts{grid-template-columns:1fr}.footer-main{grid-template-columns:1fr}.footer-bottom{flex-direction:column;gap:7px}.stats,.dash-grid{grid-template-columns:1fr}}
+/* MUSICARTE WEB — assinatura da marca */
+
+/* =========================================================
+   MUSICARTE WEB — ASSINATURA DA MARCA
+   ========================================================= */
+
+.brand-web {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-left: 6px;
+    padding: 3px 6px;
+
+    background: #5B4BDB;
+    color: #ffffff;
+
+    border-radius: 6px;
+
+    font-family: 'DM Sans', sans-serif;
+    font-size: 8px;
+    font-weight: 700;
+
+    line-height: 1;
+    letter-spacing: 0.08em;
+
+    vertical-align: middle;
+    position: relative;
+    top: -1px;
+}
