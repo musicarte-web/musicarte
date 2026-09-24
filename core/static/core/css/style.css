@@ -45,4 +45,232 @@
     vertical-align: middle;
     position: relative;
     top: -1px;
+}/* =========================================================
+   FOTO PRINCIPAL — HOME
+   ========================================================= */
+
+.hero-project-photo {
+    position: relative;
+    z-index: 2;
+
+    width: 100%;
+    max-width: 540px;
+    height: 390px;
+
+    overflow: hidden;
+
+    border-radius: 30px;
+
+    box-shadow:
+        0 25px 60px rgba(25, 23, 44, 0.16);
+
+    transform: rotate(1.5deg);
+}
+
+.hero-project-photo img {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    object-position: center;
+
+    transition: transform 0.4s ease;
+}
+
+.hero-project-photo:hover img {
+    transform: scale(1.025);
+}
+
+
+/* CELULAR */
+
+@media (max-width: 768px) {
+
+    .hero-project-photo {
+        max-width: 100%;
+        height: 300px;
+
+        border-radius: 22px;
+
+        transform: none;
+    }
+
+}/* =========================================================
+   NOVA FOTO PRINCIPAL — MUSICARTE WEB
+   ========================================================= */
+
+/* Área da fotografia */
+.hero-visual {
+    position: relative;
+    height: 420px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* FOTO PRINCIPAL */
+.hero-project-photo {
+    position: relative;
+    z-index: 3;
+
+    width: 100%;
+    max-width: 570px;
+    height: 360px;
+
+    overflow: hidden;
+
+    /* Cantos discretos */
+    border-radius: 20px;
+
+    /* Sem inclinação */
+    transform: none;
+
+    /* Sombra bem mais leve */
+    box-shadow:
+        0 18px 45px rgba(25, 23, 44, 0.12);
+
+    background: #ffffff;
+}
+
+
+/* IMAGEM */
+.hero-project-photo img {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    /* Mantém as bailarinas e o MUSICARTE visíveis */
+    object-position: center center;
+
+    transform: none;
+    transition: none;
+}
+
+
+/* Nada de zoom ao passar o mouse */
+.hero-project-photo:hover img {
+    transform: none;
+}
+
+
+/* =========================================================
+   LIMPEZA DOS ENFEITES
+   ========================================================= */
+
+/* Tira o adesivo "A arte vive em você" */
+.hero-visual .scribble {
+    display: none;
+}
+
+
+/* Tiramos a bola vermelha grande */
+.hero-visual .blob.coral {
+    display: none;
+}
+
+
+/* Detalhe amarelo menor e mais discreto */
+.hero-visual .blob.yellow {
+    width: 115px;
+    height: 115px;
+
+    top: 8px;
+    left: -18px;
+
+    border-radius: 50%;
+
+    transform: none;
+
+    opacity: 0.9;
+}
+
+
+/* Detalhe verde menor */
+.hero-visual .blob.aqua {
+    width: 85px;
+    height: 85px;
+
+    bottom: 4px;
+    left: 15px;
+
+    border-radius: 50%;
+
+    transform: none;
+
+    opacity: 0.9;
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+    .hero-visual {
+        height: 400px;
+        margin-top: 15px;
+    }
+
+    .hero-project-photo {
+        max-width: 600px;
+        height: 370px;
+    }
+
+}
+
+
+/* =========================================================
+   CELULAR
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+    .hero-visual {
+        height: auto;
+        min-height: 280px;
+
+        margin-top: 18px;
+    }
+
+    .hero-project-photo {
+        width: 100%;
+        max-width: 100%;
+
+        height: 270px;
+
+        border-radius: 16px;
+
+        box-shadow:
+            0 12px 30px rgba(25, 23, 44, 0.10);
+    }
+
+    .hero-project-photo img {
+        object-position: center center;
+    }
+
+    /* No celular deixamos ainda mais limpo */
+    .hero-visual .blob.yellow {
+        width: 75px;
+        height: 75px;
+
+        top: -18px;
+        left: -10px;
+    }
+
+    .hero-visual .blob.aqua {
+        width: 60px;
+        height: 60px;
+
+        bottom: -15px;
+        left: 12px;
+    }
+
 }

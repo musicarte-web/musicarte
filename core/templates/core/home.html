@@ -1,10 +1,340 @@
-{% extends 'core/base.html' %}{% load static %}{% block title %}Musicarte • Arte que aproxima pessoas{% endblock %}{% block content %}
+{% extends 'core/base.html' %}
+{% load static %}
+
+{% block title %}Musicarte Web • Arte que aproxima pessoas{% endblock %}
+
+{% block content %}
+
+<!-- =====================================================
+     HERO / INÍCIO
+     ===================================================== -->
+
 <section class="home-hero shell">
-  <div class="hero-copy"><span class="kicker">ARTE • CULTURA • COMUNIDADE</span><h1>Arte que aproxima <em>pessoas.</em></h1><p>Música, dança, artes cênicas e artes visuais no IFPR — Campus Paranavaí.</p><div class="hero-actions"><a class="btn coral" href="{% url 'cursos' %}">Conheça as oficinas <span>→</span></a><a class="btn outline" href="{% url 'sobre' %}">Sobre o Musicarte</a></div></div>
-  <div class="hero-visual"><div class="blob yellow"></div><div class="blob coral"></div><div class="blob aqua"></div><div class="hero-photo-placeholder"><div class="mini-logo"><span class="brand-name">music<span>arte</span></span><small>foto do projeto em breve</small></div></div><span class="scribble">A arte<br>vive em você ♡</span></div>
+
+    <div class="hero-copy">
+
+        <span class="kicker">
+            ARTE • CULTURA • COMUNIDADE
+        </span>
+
+        <h1>
+            Arte que aproxima
+            <em>pessoas.</em>
+        </h1>
+
+        <p>
+            Música, dança, artes cênicas e artes visuais
+            no IFPR — Campus Paranavaí.
+        </p>
+
+        <div class="hero-actions">
+
+            <a class="btn coral" href="{% url 'cursos' %}">
+                Conheça as oficinas <span>→</span>
+            </a>
+
+            <a class="btn outline" href="{% url 'sobre' %}">
+                Sobre o Musicarte
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <!-- FOTO PRINCIPAL DO MUSICARTE -->
+
+    <div class="hero-visual">
+
+        <div class="blob yellow"></div>
+        <div class="blob coral"></div>
+        <div class="blob aqua"></div>
+
+        <div class="hero-project-photo">
+
+            <img
+                src="{% static 'core/img/musicarte-home.png' %}"
+                alt="Participantes do Projeto Musicarte"
+            >
+
+        </div>
+
+        <span class="scribble">
+            A arte<br>
+            vive em você ♡
+        </span>
+
+    </div>
+
 </section>
-<section class="art-strip"><div><span class="art-icon purple">♪</span><strong>Música</strong><small>Ritmo que conecta</small></div><div><span class="art-icon coral-bg">✦</span><strong>Dança</strong><small>Movimento que inspira</small></div><div><span class="art-icon yellow-bg">◐</span><strong>Artes Cênicas</strong><small>Expressão que transforma</small></div><div><span class="art-icon aqua-bg">✺</span><strong>Artes Visuais</strong><small>Cores que contam histórias</small></div></section>
-<section class="home-section white"><div class="section-title"><span class="kicker">NOSSAS OFICINAS</span><h2>Encontre sua forma de se expressar.</h2><p>Atividades para estudantes e comunidade, em diferentes linguagens artísticas.</p></div><div class="workshop-grid">{% for curso in cursos %}<a class="workshop-card" href="{% url 'curso_detalhe' curso.pk %}">{% if curso.imagem %}<img src="{{ curso.imagem.url }}" alt="{{ curso.nome }}">{% else %}<div class="card-art tone-{{ forloop.counter }}"><span>{{ curso.nome|slice:':1' }}</span></div>{% endif %}<div class="card-copy"><small>OFICINA</small><h3>{{ curso.nome }}</h3><p>{{ curso.descricao|truncatewords:14 }}</p><b>Saiba mais →</b></div></a>{% empty %}<div class="empty pretty"><h3>As oficinas entram aqui em breve.</h3><p>O espaço já está pronto para receber nomes, fotos, horários e instrutores quando essas informações estiverem disponíveis.</p></div>{% endfor %}</div><div class="center-action"><a class="text-link" href="{% url 'cursos' %}">Ver todas as oficinas →</a></div></section>
-<section class="home-duo shell"><article class="event-teaser"><span class="kicker">PRÓXIMOS EVENTOS</span>{% if eventos %}{% with e=eventos.0 %}<h2>{{ e.titulo }}</h2><p>{{ e.data|date:'d/m/Y' }}{% if e.local %} • {{ e.local }}{% endif %}</p>{% endwith %}{% else %}<h2>Em breve, novos encontros.</h2><p>Apresentações, mostras e atividades do Musicarte serão divulgadas por aqui.</p>{% endif %}<a class="btn outline" href="{% url 'eventos' %}">Ver agenda</a><span class="calendar-doodle">✦</span></article><article class="about-teaser"><div><span class="kicker">O PROJETO MUSICARTE</span><h2>Um espaço de arte, encontros e oportunidades.</h2><p>Criado em 2012 no IFPR — Campus Paranavaí, o Musicarte aproxima estudantes e comunidade por meio da expressão artística.</p><a class="text-link" href="{% url 'sobre' %}">Conheça nossa história →</a></div><div class="about-shape">arte</div></article></section>
-<section class="closing"><span>MUSICARTE • IFPR CAMPUS PARANAVAÍ</span><h2>Mais arte. Mais encontros.<br><em>Mais possibilidades.</em></h2></section>
+
+
+
+<!-- =====================================================
+     ÁREAS ARTÍSTICAS
+     ===================================================== -->
+
+<section class="art-strip">
+
+    <div>
+        <span class="art-icon purple">♪</span>
+        <strong>Música</strong>
+        <small>Ritmo que conecta</small>
+    </div>
+
+    <div>
+        <span class="art-icon coral-bg">✦</span>
+        <strong>Dança</strong>
+        <small>Movimento que inspira</small>
+    </div>
+
+    <div>
+        <span class="art-icon yellow-bg">◐</span>
+        <strong>Artes Cênicas</strong>
+        <small>Expressão que transforma</small>
+    </div>
+
+    <div>
+        <span class="art-icon aqua-bg">✺</span>
+        <strong>Artes Visuais</strong>
+        <small>Cores que contam histórias</small>
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     OFICINAS
+     ===================================================== -->
+
+<section class="home-section white">
+
+    <div class="section-title">
+
+        <span class="kicker">
+            NOSSAS OFICINAS
+        </span>
+
+        <h2>
+            Encontre sua forma de se expressar.
+        </h2>
+
+        <p>
+            Atividades para estudantes e comunidade,
+            em diferentes linguagens artísticas.
+        </p>
+
+    </div>
+
+
+    <div class="workshop-grid">
+
+        {% for curso in cursos %}
+
+            <a
+                class="workshop-card"
+                href="{% url 'curso_detalhe' curso.pk %}"
+            >
+
+                {% if curso.imagem %}
+
+                    <img
+                        src="{{ curso.imagem.url }}"
+                        alt="{{ curso.nome }}"
+                    >
+
+                {% else %}
+
+                    <div class="card-art tone-{{ forloop.counter }}">
+                        <span>
+                            {{ curso.nome|slice:':1' }}
+                        </span>
+                    </div>
+
+                {% endif %}
+
+
+                <div class="card-copy">
+
+                    <small>
+                        OFICINA
+                    </small>
+
+                    <h3>
+                        {{ curso.nome }}
+                    </h3>
+
+                    <p>
+                        {{ curso.descricao|truncatewords:14 }}
+                    </p>
+
+                    <b>
+                        Saiba mais →
+                    </b>
+
+                </div>
+
+            </a>
+
+
+        {% empty %}
+
+            <div class="empty pretty">
+
+                <h3>
+                    As oficinas entram aqui em breve.
+                </h3>
+
+                <p>
+                    O espaço já está pronto para receber
+                    nomes, fotos, horários e instrutores
+                    quando essas informações estiverem
+                    disponíveis.
+                </p>
+
+            </div>
+
+        {% endfor %}
+
+    </div>
+
+
+    <div class="center-action">
+
+        <a
+            class="text-link"
+            href="{% url 'cursos' %}"
+        >
+            Ver todas as oficinas →
+        </a>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     EVENTOS + SOBRE
+     ===================================================== -->
+
+<section class="home-duo shell">
+
+
+    <!-- EVENTOS -->
+
+    <article class="event-teaser">
+
+        <span class="kicker">
+            PRÓXIMOS EVENTOS
+        </span>
+
+
+        {% if eventos %}
+
+            {% with e=eventos.0 %}
+
+                <h2>
+                    {{ e.titulo }}
+                </h2>
+
+                <p>
+                    {{ e.data|date:'d/m/Y' }}
+
+                    {% if e.local %}
+                        • {{ e.local }}
+                    {% endif %}
+                </p>
+
+            {% endwith %}
+
+
+        {% else %}
+
+            <h2>
+                Em breve, novos encontros.
+            </h2>
+
+            <p>
+                Apresentações, mostras e atividades
+                do Musicarte serão divulgadas por aqui.
+            </p>
+
+        {% endif %}
+
+
+        <a
+            class="btn outline"
+            href="{% url 'eventos' %}"
+        >
+            Ver agenda
+        </a>
+
+        <span class="calendar-doodle">
+            ✦
+        </span>
+
+    </article>
+
+
+
+    <!-- SOBRE O PROJETO -->
+
+    <article class="about-teaser">
+
+        <div>
+
+            <span class="kicker">
+                O PROJETO MUSICARTE
+            </span>
+
+            <h2>
+                Um espaço de arte, encontros
+                e oportunidades.
+            </h2>
+
+            <p>
+                Criado em 2012 no IFPR — Campus Paranavaí,
+                o Musicarte aproxima estudantes e comunidade
+                por meio da expressão artística.
+            </p>
+
+            <a
+                class="text-link"
+                href="{% url 'sobre' %}"
+            >
+                Conheça nossa história →
+            </a>
+
+        </div>
+
+
+        <div class="about-shape">
+            arte
+        </div>
+
+    </article>
+
+</section>
+
+
+
+<!-- =====================================================
+     ENCERRAMENTO
+     ===================================================== -->
+
+<section class="closing">
+
+    <span>
+        MUSICARTE • IFPR CAMPUS PARANAVAÍ
+    </span>
+
+    <h2>
+        Mais arte. Mais encontros.<br>
+        <em>Mais possibilidades.</em>
+    </h2>
+
+</section>
+
 {% endblock %}

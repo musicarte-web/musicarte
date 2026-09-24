@@ -1,7 +1,170 @@
-{% extends 'core/base.html' %}{% load static %}{% block title %}Sobre • Musicarte{% endblock %}{% block content %}
-<section class="inner-hero shell"><div><span class="kicker">NOSSA HISTÓRIA</span><h1>A arte transforma.<br>O Musicarte <em>aproxima.</em></h1><p>Um projeto de extensão do IFPR — Campus Paranavaí que cria espaços para aprender, experimentar, compartilhar e viver a arte.</p></div><div class="history-art"><span>desde</span><strong>2012</strong><small>arte • cultura • comunidade</small></div></section>
-<section class="story white"><div><span class="kicker">DESDE 2012</span><h2>Uma história construída através da arte.</h2></div><div class="story-copy"><p>O Musicarte nasceu no Instituto Federal do Paraná — Campus Paranavaí com a proposta de aproximar estudantes e comunidade da cultura e das diferentes formas de expressão artística.</p><p>O projeto desenvolve atividades nas áreas de artes cênicas, artes visuais, dança e música, criando oportunidades para descobrir, desenvolver e compartilhar talentos.</p><p class="lead-quote">Mais do que ensinar técnicas artísticas, o Musicarte cria um espaço de convivência, criatividade e expressão.</p></div></section>
-<section class="areas-list white"><div><span>01</span><h3>Música</h3></div><div><span>02</span><h3>Dança</h3></div><div><span>03</span><h3>Artes Cênicas</h3></div><div><span>04</span><h3>Artes Visuais</h3></div></section>
-<section class="coordination"><div class="coord-photo"><img src="{% static 'core/img/ester.png' %}" alt="Professora Ester Cristina Back Schulz"></div><div><span class="kicker">COORDENAÇÃO</span><h2>Prof.ª Ester Cristina<br>Back Schulz</h2><p class="role">Coordenadora do Projeto Musicarte</p><p>A coordenação acompanha o desenvolvimento das atividades do projeto e sua integração com estudantes, comunidade e diferentes linguagens artísticas.</p></div></section>
-<section class="about-system shell"><span class="kicker">MUSICARTE WEB</span><h2>Informação e organização em um só lugar.</h2><p>Este sistema reúne informações do projeto, divulga oficinas e eventos e também apoia o gerenciamento das atividades e da frequência dos participantes.</p></section>
+{% extends 'core/base.html' %}
+{% load static %}
+
+{% block title %}Sobre • Musicarte Web{% endblock %}
+
+{% block content %}
+
+<!-- =====================================================
+     ABERTURA
+     ===================================================== -->
+
+<section class="sobre-intro shell">
+
+    <span class="kicker">
+        NOSSA HISTÓRIA
+    </span>
+
+    <h1>
+        A arte transforma.<br>
+        O Musicarte <em>aproxima.</em>
+    </h1>
+
+    <p>
+        Um projeto de extensão do IFPR — Campus Paranavaí
+        que cria espaços para aprender, experimentar,
+        compartilhar e viver a arte.
+    </p>
+
+    <div class="sobre-dots" aria-hidden="true">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     HISTÓRIA
+     ===================================================== -->
+
+<section class="story white">
+
+    <div>
+        <span class="kicker">DESDE 2012</span>
+
+        <h2>
+            Uma história construída através da arte.
+        </h2>
+    </div>
+
+    <div class="story-copy">
+
+        <p>
+            O Musicarte nasceu no Instituto Federal do Paraná —
+            Campus Paranavaí com a proposta de aproximar estudantes
+            e comunidade da cultura e das diferentes formas de
+            expressão artística.
+        </p>
+
+        <p>
+            O projeto desenvolve atividades nas áreas de artes
+            cênicas, artes visuais, dança e música, criando
+            oportunidades para descobrir, desenvolver e
+            compartilhar talentos.
+        </p>
+
+        <p class="lead-quote">
+            Mais do que ensinar técnicas artísticas, o Musicarte
+            cria um espaço de convivência, criatividade e expressão.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     ÁREAS DO MUSICARTE
+     ===================================================== -->
+
+<section class="areas-list white">
+
+    <div>
+        <span>01</span>
+        <h3>Música</h3>
+    </div>
+
+    <div>
+        <span>02</span>
+        <h3>Dança</h3>
+    </div>
+
+    <div>
+        <span>03</span>
+        <h3>Artes Cênicas</h3>
+    </div>
+
+    <div>
+        <span>04</span>
+        <h3>Artes Visuais</h3>
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     COORDENAÇÃO
+     ===================================================== -->
+
+<section class="coordination">
+
+    <div class="coord-photo">
+
+        <img
+            src="{% static 'core/img/ester.png' %}"
+            alt="Professora Ester Cristina Back Schulz"
+        >
+
+    </div>
+
+    <div>
+
+        <span class="kicker">
+            COORDENAÇÃO
+        </span>
+
+        <h2>
+            Prof.ª Ester Cristina<br>
+            Back Schulz
+        </h2>
+
+        <p class="role">
+            Coordenadora do Projeto Musicarte
+        </p>
+
+        <p>
+            A coordenação acompanha o desenvolvimento das
+            atividades do projeto e sua integração com estudantes,
+            comunidade e diferentes linguagens artísticas.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     MUSICARTE WEB
+     ===================================================== -->
+
+<section class="about-system shell">
+
+    <span class="kicker">
+        MUSICARTE WEB
+    </span>
+
+    <h2>
+        Informação e organização em um só lugar.
+    </h2>
+
+    <p>
+        Este sistema reúne informações do projeto, divulga oficinas
+        e eventos e também apoia o gerenciamento das atividades e
+        da frequência dos participantes.
+    </p>
+
+</section>
+
 {% endblock %}
