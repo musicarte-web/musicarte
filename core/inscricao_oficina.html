@@ -1,0 +1,144 @@
+{% extends 'core/base.html' %}
+
+{% block title %}Inscrição • {{ curso.nome }}{% endblock %}
+
+{% block content %}
+
+<section class="enrollment-page shell">
+
+    <a
+        class="back-link"
+        href="{% url 'curso_detalhe' curso.pk %}"
+    >
+        ← Voltar para {{ curso.nome }}
+    </a>
+
+
+    <div class="enrollment-layout">
+
+        <!-- INFORMAÇÕES DA OFICINA -->
+
+        <div class="enrollment-intro">
+
+            <span class="kicker">
+                INSCRIÇÃO
+            </span>
+
+            <h1>
+                Faça parte do<br>
+                <em>Musicarte.</em>
+            </h1>
+
+            <p>
+                Você está se inscrevendo na oficina
+                <strong>{{ curso.nome }}</strong>.
+                Preencha seus dados para realizar sua inscrição.
+            </p>
+
+
+            <div class="enrollment-course-info">
+
+                <div>
+                    <small>OFICINA</small>
+                    <strong>{{ curso.nome }}</strong>
+                </div>
+
+                <div>
+                    <small>HORÁRIO</small>
+                    <strong>
+                        {{ curso.horario|default:"A definir" }}
+                    </strong>
+                </div>
+
+                <div>
+                    <small>LOCAL</small>
+                    <strong>
+                        {{ curso.local|default:"A definir" }}
+                    </strong>
+                </div>
+
+                <div>
+                    <small>VAGAS DISPONÍVEIS</small>
+                    <strong>{{ vagas_disponiveis }}</strong>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- FORMULÁRIO -->
+
+        <div class="enrollment-form-card">
+
+            <span class="kicker">
+                SEUS DADOS
+            </span>
+
+            <h2>Inscreva-se na oficina</h2>
+
+            <p class="form-description">
+                Informe seus dados abaixo para concluir sua inscrição.
+            </p>
+
+
+            <form method="post">
+
+                {% csrf_token %}
+
+
+                {% if form.non_field_errors %}
+
+                    <div class="form-errors">
+                        {{ form.non_field_errors }}
+                    </div>
+
+                {% endif %}
+
+
+                {% for field in form %}
+
+                    <div class="public-form-field">
+
+                        <label for="{{ field.id_for_label }}">
+                            {{ field.label }}
+                        </label>
+
+                        {{ field }}
+
+                        {% if field.errors %}
+
+                            <div class="field-error">
+                                {{ field.errors }}
+                            </div>
+
+                        {% endif %}
+
+                    </div>
+
+                {% endfor %}
+
+
+                <button
+                    class="btn coral enrollment-submit"
+                    type="submit"
+                >
+                    Confirmar inscrição
+                    <span>→</span>
+                </button>
+
+            </form>
+
+
+            <p class="privacy-note">
+                Seus dados serão utilizados apenas para o gerenciamento
+                da sua participação nas atividades do Projeto Musicarte.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+{% endblock %}

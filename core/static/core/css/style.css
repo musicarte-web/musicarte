@@ -273,4 +273,289 @@
         left: 12px;
     }
 
+}/* =========================================================
+   INSCRIÇÃO PÚBLICA NAS OFICINAS
+   ========================================================= */
+
+/* ---------- DETALHE DA OFICINA ---------- */
+
+.course-enrollment {
+    margin-top: 32px;
+    padding-top: 26px;
+    border-top: 1px solid rgba(31, 29, 46, 0.10);
+}
+
+.vacancies {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    margin-bottom: 18px;
+    font-size: 14px;
+}
+
+.vacancy-dot {
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background: var(--aqua);
+    flex-shrink: 0;
+}
+
+.enrollment-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+}
+
+.enrollment-note {
+    display: block;
+    margin-top: 12px;
+    color: var(--muted);
+    font-size: 12px;
+}
+
+.no-vacancies {
+    padding: 17px 20px;
+    border-radius: 14px;
+    background: rgba(255, 107, 107, 0.10);
+}
+
+
+/* =========================================================
+   PÁGINA DE INSCRIÇÃO
+   ========================================================= */
+
+.enrollment-page {
+    padding-top: 55px;
+    padding-bottom: 100px;
+}
+
+.enrollment-page > .back-link {
+    display: inline-block;
+    margin-bottom: 45px;
+}
+
+.enrollment-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 0.9fr) minmax(420px, 1fr);
+    gap: 80px;
+    align-items: start;
+}
+
+
+/* ---------- TEXTO DA ESQUERDA ---------- */
+
+.enrollment-intro {
+    padding-top: 25px;
+}
+
+.enrollment-intro h1 {
+    margin: 15px 0 24px;
+    font-family: "Playfair Display", serif;
+    font-size: clamp(48px, 5vw, 70px);
+    line-height: 1;
+    letter-spacing: -0.04em;
+}
+
+.enrollment-intro h1 em {
+    color: var(--coral);
+    font-style: normal;
+}
+
+.enrollment-intro > p {
+    max-width: 500px;
+    color: var(--muted);
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+
+/* ---------- INFORMAÇÕES DA OFICINA ---------- */
+
+.enrollment-course-info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1px;
+    margin-top: 38px;
+    overflow: hidden;
+    border: 1px solid rgba(31, 29, 46, 0.10);
+    border-radius: 18px;
+    background: rgba(31, 29, 46, 0.10);
+}
+
+.enrollment-course-info > div {
+    min-height: 95px;
+    padding: 20px;
+    background: #fff;
+}
+
+.enrollment-course-info small {
+    display: block;
+    margin-bottom: 7px;
+    color: var(--muted);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+}
+
+.enrollment-course-info strong {
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+
+/* ---------- CARTÃO DO FORMULÁRIO ---------- */
+
+.enrollment-form-card {
+    padding: 38px 42px;
+    border: 1px solid rgba(31, 29, 46, 0.08);
+    border-radius: 24px;
+    background: #fff;
+    box-shadow: 0 20px 55px rgba(25, 23, 44, 0.08);
+}
+
+.enrollment-form-card h2 {
+    margin: 10px 0 8px;
+    font-family: "Playfair Display", serif;
+    font-size: 32px;
+}
+
+.form-description {
+    margin: 0 0 28px;
+    color: var(--muted);
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+
+/* ---------- CAMPOS ---------- */
+
+.public-form-field {
+    margin-bottom: 19px;
+}
+
+.public-form-field label {
+    display: block;
+    margin-bottom: 7px;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.public-form-field .form-control {
+    width: 100%;
+    min-height: 48px;
+    padding: 0 15px;
+    border: 1px solid rgba(31, 29, 46, 0.15);
+    border-radius: 11px;
+    outline: none;
+    background: #fff;
+    font-family: "DM Sans", sans-serif;
+    font-size: 14px;
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.public-form-field .form-control:focus {
+    border-color: var(--purple);
+    box-shadow: 0 0 0 3px rgba(106, 76, 147, 0.10);
+}
+
+.public-form-field .form-control::placeholder {
+    color: #aaa6b2;
+}
+
+
+/* ---------- ERROS ---------- */
+
+.field-error,
+.form-errors {
+    margin-top: 7px;
+    color: #c94f4f;
+    font-size: 12px;
+}
+
+.field-error ul,
+.form-errors ul {
+    margin: 0;
+    padding-left: 17px;
+}
+
+
+/* ---------- BOTÃO ---------- */
+
+.enrollment-submit {
+    width: 100%;
+    margin-top: 8px;
+    border: 0;
+    cursor: pointer;
+    font-family: "DM Sans", sans-serif;
+}
+
+.privacy-note {
+    margin: 17px 0 0;
+    color: var(--muted);
+    font-size: 11px;
+    line-height: 1.55;
+    text-align: center;
+}
+
+
+/* =========================================================
+   RESPONSIVO
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+    .enrollment-layout {
+        grid-template-columns: 1fr;
+        gap: 45px;
+    }
+
+    .enrollment-intro {
+        padding-top: 0;
+    }
+
+    .enrollment-intro > p {
+        max-width: 650px;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .enrollment-page {
+        padding-top: 35px;
+        padding-bottom: 65px;
+    }
+
+    .enrollment-page > .back-link {
+        margin-bottom: 30px;
+    }
+
+    .enrollment-intro h1 {
+        font-size: 46px;
+    }
+
+    .enrollment-course-info {
+        grid-template-columns: 1fr;
+    }
+
+    .enrollment-course-info > div {
+        min-height: auto;
+    }
+
+    .enrollment-form-card {
+        padding: 28px 22px;
+        border-radius: 18px;
+    }
+
+    .enrollment-form-card h2 {
+        font-size: 28px;
+    }
+
+    .enrollment-button {
+        width: 100%;
+    }
 }

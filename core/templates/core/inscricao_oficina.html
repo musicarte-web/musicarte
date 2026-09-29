@@ -1,0 +1,113 @@
+{% extends 'core/base.html' %}
+
+{% block title %}Inscrição • {{ curso.nome }} • Musicarte{% endblock %}
+
+{% block content %}
+
+<section class="enrollment-page shell">
+
+    <a class="back-link" href="{% url 'curso_detalhe' curso.pk %}">
+        ← Voltar para a oficina
+    </a>
+
+    <div class="enrollment-layout">
+
+        <div class="enrollment-intro">
+
+            <span class="kicker">INSCRIÇÃO</span>
+
+            <h1>
+                Faça parte do<br>
+                <em>Musicarte.</em>
+            </h1>
+
+            <p>
+                Preencha seus dados para se inscrever na oficina
+                <strong>{{ curso.nome }}</strong>.
+            </p>
+
+            <div class="enrollment-course-info">
+
+                <div>
+                    <small>OFICINA</small>
+                    <strong>{{ curso.nome }}</strong>
+                </div>
+
+                <div>
+                    <small>INSTRUTOR(A)</small>
+                    <strong>{{ curso.instrutor|default:"A definir" }}</strong>
+                </div>
+
+                <div>
+                    <small>HORÁRIO</small>
+                    <strong>{{ curso.horario|default:"A definir" }}</strong>
+                </div>
+
+                <div>
+                    <small>LOCAL</small>
+                    <strong>{{ curso.local|default:"A definir" }}</strong>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="enrollment-form-card">
+
+            <span class="kicker">SEUS DADOS</span>
+
+            <h2>Inscreva-se na oficina</h2>
+
+            <p class="form-description">
+                Informe seus dados abaixo para realizar sua inscrição.
+            </p>
+
+            <form method="post">
+
+                {% csrf_token %}
+
+                {% if form.non_field_errors %}
+                    <div class="form-errors">
+                        {{ form.non_field_errors }}
+                    </div>
+                {% endif %}
+
+                {% for field in form %}
+
+                    <div class="public-form-field">
+
+                        <label for="{{ field.id_for_label }}">
+                            {{ field.label }}
+                        </label>
+
+                        {{ field }}
+
+                        {% if field.errors %}
+                            <div class="field-error">
+                                {{ field.errors }}
+                            </div>
+                        {% endif %}
+
+                    </div>
+
+                {% endfor %}
+
+                <button type="submit" class="btn coral enrollment-submit">
+                    Confirmar inscrição →
+                </button>
+
+            </form>
+
+            <p class="privacy-note">
+                Seus dados serão utilizados apenas para o gerenciamento
+                da sua participação no projeto.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+{% endblock %}
