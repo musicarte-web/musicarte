@@ -3,7 +3,7 @@ import dj_database_url
 from pathlib import Path
 BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'musicarte-dev-key-change-in-production'
-DEBUG = False
+DEBUG = True
 ALLOWED_HOSTS = ["*"]
 INSTALLED_APPS = [
     'django.contrib.admin','django.contrib.auth','django.contrib.contenttypes',
@@ -20,6 +20,7 @@ TEMPLATES=[{'BACKEND':'django.template.backends.django.DjangoTemplates','DIRS':[
 WSGI_APPLICATION='config.wsgi.application'
 DATABASES = {
     "default": dj_database_url.config(
+        default=f"sqlite:///{BASE_DIR / 'db.sqlite3'}"
     )
 }
 AUTH_PASSWORD_VALIDATORS=[]
