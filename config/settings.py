@@ -21,12 +21,12 @@ ROOT_URLCONF='config.urls'
 TEMPLATES=[{'BACKEND':'django.template.backends.django.DjangoTemplates','DIRS':[BASE_DIR/'templates'],'APP_DIRS':True,'OPTIONS':{'context_processors':['django.template.context_processors.request','django.contrib.auth.context_processors.auth','django.contrib.messages.context_processors.messages']}}]
 WSGI_APPLICATION='config.wsgi.application'
 DATABASES = {
-    "default": dj_database_url.config(
-        default=os.getenv("DATABASE_URL")
+    "default": dj_database_url.parse(
+        os.getenv("DATABASE_URL"),
+        conn_max_age=600,
+        ssl_require=True,
     )
 }
-print("DATABASE_URL EXISTE:", bool(os.getenv("DATABASE_URL")))
-print("DATABASE:", DATABASES)
 AUTH_PASSWORD_VALIDATORS=[]
 LANGUAGE_CODE='pt-br'
 TIME_ZONE='America/Sao_Paulo'
