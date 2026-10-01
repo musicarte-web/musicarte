@@ -25,6 +25,8 @@ DATABASES = {
         default=os.getenv("DATABASE_URL")
     )
 }
+print("DATABASE_URL EXISTE:", bool(os.getenv("DATABASE_URL")))
+print("DATABASE:", DATABASES)
 AUTH_PASSWORD_VALIDATORS=[]
 LANGUAGE_CODE='pt-br'
 TIME_ZONE='America/Sao_Paulo'
