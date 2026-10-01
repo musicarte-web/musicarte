@@ -1,8 +1,6 @@
 import os
-from dotenv import load_dotenv
 import dj_database_url
 from pathlib import Path
-load_dotenv()
 BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.getenv("SECRET_KEY")
 DEBUG = True
@@ -21,10 +19,8 @@ ROOT_URLCONF='config.urls'
 TEMPLATES=[{'BACKEND':'django.template.backends.django.DjangoTemplates','DIRS':[BASE_DIR/'templates'],'APP_DIRS':True,'OPTIONS':{'context_processors':['django.template.context_processors.request','django.contrib.auth.context_processors.auth','django.contrib.messages.context_processors.messages']}}]
 WSGI_APPLICATION='config.wsgi.application'
 DATABASES = {
-    "default": dj_database_url.parse(
-        os.getenv("DATABASE_URL"),
-        conn_max_age=600,
-        ssl_require=True,
+    "default": dj_database_url.config(
+        default=os.getenv("DATABASE_URL")
     )
 }
 AUTH_PASSWORD_VALIDATORS=[]
