@@ -52,10 +52,7 @@
 
         <div class="hero-project-photo">
 
-            <img
-                src="{% static 'core/img/musicarte-home.png' %}"
-                alt="Participantes do Projeto Musicarte"
-            >
+            <img src="{% static 'core/img/musicarte-home.png' %}" alt="Participantes do Projeto Musicarte">
 
         </div>
 
@@ -132,68 +129,62 @@
 
         {% for curso in cursos %}
 
-            <a
-                class="workshop-card"
-                href="{% url 'curso_detalhe' curso.pk %}"
-            >
+        <a class="workshop-card" href="{% url 'curso_detalhe' curso.pk %}">
 
-                {% if curso.imagem %}
+            {% if curso.imagem %}
 
-                    <img
-                        src="{{ curso.imagem.url }}"
-                        alt="{{ curso.nome }}"
-                    >
+            <img src="{{ curso.imagem.url }}" alt="{{ curso.nome }}">
 
-                {% else %}
+            {% else %}
 
-                    <div class="card-art tone-{{ forloop.counter }}">
-                        <span>
-                            {{ curso.nome|slice:':1' }}
-                        </span>
-                    </div>
+            <div class="card-art tone-{{ forloop.counter }}">
+                <span>
+                    {{ curso.nome|slice:':1' }}
+                </span>
+            </div>
 
-                {% endif %}
+            {% endif %}
 
 
-                <div class="card-copy">
+            <div class="card-copy">
 
-                    <small>
-                        OFICINA
-                    </small>
+                <small>
+                    OFICINA
+                </small>
 
-                    <h3>
-                        {{ curso.nome }}
-                    </h3>
+                <h3>
+                    {{ curso.nome }}
+                </h3>
 
-                    <p>
-                        {{ curso.descricao|truncatewords:14 }}
-                    </p>
+                <p>
+                    {{ curso.descricao|truncatewords:14 }}
+                </p>
 
-                    <b>
-                        Saiba mais →
-                    </b>
+                <b>
+                    Saiba mais →
+                </b>
 
-                </div>
+            </div>
 
-            </a>
+        </a>
 
 
         {% empty %}
 
-            <div class="empty pretty">
+        <div class="empty pretty">
 
-                <h3>
-                    As oficinas entram aqui em breve.
-                </h3>
+            <h3>
+                As oficinas entram aqui em breve.
+            </h3>
 
-                <p>
-                    O espaço já está pronto para receber
-                    nomes, fotos, horários e instrutores
-                    quando essas informações estiverem
-                    disponíveis.
-                </p>
+            <p>
+                O espaço já está pronto para receber
+                nomes, fotos, horários e instrutores
+                quando essas informações estiverem
+                disponíveis.
+            </p>
 
-            </div>
+        </div>
 
         {% endfor %}
 
@@ -202,10 +193,7 @@
 
     <div class="center-action">
 
-        <a
-            class="text-link"
-            href="{% url 'cursos' %}"
-        >
+        <a class="text-link" href="{% url 'cursos' %}">
             Ver todas as oficinas →
         </a>
 
@@ -233,41 +221,38 @@
 
         {% if eventos %}
 
-            {% with e=eventos.0 %}
+        {% with e=eventos.0 %}
 
-                <h2>
-                    {{ e.titulo }}
-                </h2>
+        <h2>
+            {{ e.titulo }}
+        </h2>
 
-                <p>
-                    {{ e.data|date:'d/m/Y' }}
+        <p>
+            {{ e.data|date:'d/m/Y' }}
 
-                    {% if e.local %}
-                        • {{ e.local }}
-                    {% endif %}
-                </p>
+            {% if e.local %}
+            • {{ e.local }}
+            {% endif %}
+        </p>
 
-            {% endwith %}
+        {% endwith %}
 
 
         {% else %}
 
-            <h2>
-                Em breve, novos encontros.
-            </h2>
+        <h2>
+            Em breve, novos encontros.
+        </h2>
 
-            <p>
-                Apresentações, mostras e atividades
-                do Musicarte serão divulgadas por aqui.
-            </p>
+        <p>
+            Apresentações, mostras e atividades
+            do Musicarte serão divulgadas por aqui.
+        </p>
 
         {% endif %}
 
 
-        <a
-            class="btn outline"
-            href="{% url 'eventos' %}"
-        >
+        <a class="btn outline" href="{% url 'eventos' %}">
             Ver agenda
         </a>
 
@@ -300,10 +285,7 @@
                 por meio da expressão artística.
             </p>
 
-            <a
-                class="text-link"
-                href="{% url 'sobre' %}"
-            >
+            <a class="text-link" href="{% url 'sobre' %}">
                 Conheça nossa história →
             </a>
 

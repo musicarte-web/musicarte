@@ -16,18 +16,14 @@
         <div>
             {% if curso.imagem %}
 
-                <img
-                    class="course-detail-image"
-                    src="{{ curso.imagem.url }}"
-                    alt="{{ curso.nome }}"
-                >
+            <img class="course-detail-image" src="{{ curso.imagem.url }}" alt="{{ curso.nome }}">
 
             {% else %}
 
-                <div class="course-detail-image detail-placeholder">
-                    <span>{{ curso.nome|slice:':1' }}</span>
-                    <small>foto da oficina em breve</small>
-                </div>
+            <div class="course-detail-image detail-placeholder">
+                <span>{{ curso.nome|slice:':1' }}</span>
+                <small>foto da oficina em breve</small>
+            </div>
 
             {% endif %}
         </div>
@@ -76,33 +72,30 @@
 
                 {% if vagas_disponiveis > 0 %}
 
-                    <div class="vacancies">
-                        <span class="vacancy-dot"></span>
+                <div class="vacancies">
+                    <span class="vacancy-dot"></span>
 
-                        <strong>
-                            {{ vagas_disponiveis }}
-                            vaga{{ vagas_disponiveis|pluralize }}
-                            disponível{{ vagas_disponiveis|pluralize:"is" }}
-                        </strong>
-                    </div>
+                    <strong>
+                        {{ vagas_disponiveis }}
+                        vaga{{ vagas_disponiveis|pluralize }}
+                        disponível{{ vagas_disponiveis|pluralize:"is" }}
+                    </strong>
+                </div>
 
-                    <a
-                        class="btn coral enrollment-button"
-                        href="{% url 'inscricao_oficina' curso.pk %}"
-                    >
-                        Inscreva-se nesta oficina
-                        <span>→</span>
-                    </a>
+                <a class="btn coral enrollment-button" href="{% url 'inscricao_oficina' curso.pk %}">
+                    Inscreva-se nesta oficina
+                    <span>→</span>
+                </a>
 
-                    <small class="enrollment-note">
-                        Preencha seus dados para solicitar sua inscrição.
-                    </small>
+                <small class="enrollment-note">
+                    Preencha seus dados para solicitar sua inscrição.
+                </small>
 
                 {% else %}
 
-                    <div class="no-vacancies">
-                        <strong>Oficina sem vagas disponíveis no momento.</strong>
-                    </div>
+                <div class="no-vacancies">
+                    <strong>Oficina sem vagas disponíveis no momento.</strong>
+                </div>
 
                 {% endif %}
 

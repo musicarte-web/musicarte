@@ -68,28 +68,28 @@
                 {% csrf_token %}
 
                 {% if form.non_field_errors %}
-                    <div class="form-errors">
-                        {{ form.non_field_errors }}
-                    </div>
+                <div class="form-errors">
+                    {{ form.non_field_errors }}
+                </div>
                 {% endif %}
 
                 {% for field in form %}
 
-                    <div class="public-form-field">
+                <div class="public-form-field">
 
-                        <label for="{{ field.id_for_label }}">
-                            {{ field.label }}
-                        </label>
+                    <label for="{{ field.id_for_label }}">
+                        {{ field.label }}
+                    </label>
 
-                        {{ field }}
+                    {{ field }}
 
-                        {% if field.errors %}
-                            <div class="field-error">
-                                {{ field.errors }}
-                            </div>
-                        {% endif %}
-
+                    {% if field.errors %}
+                    <div class="field-error">
+                        {{ field.errors }}
                     </div>
+                    {% endif %}
+
+                </div>
 
                 {% endfor %}
 
