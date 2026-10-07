@@ -158,6 +158,38 @@ for base, classes in [
 
 
 # =========================================================
+# GALERIA
+# =========================================================
+
+urlpatterns += [
+
+    path(
+        "painel/galeria/",
+        views.MidiaList.as_view(),
+        name="midia_lista"
+    ),
+
+    path(
+        "painel/galeria/nova/",
+        views.MidiaCreate.as_view(),
+        name="midia_novo"
+    ),
+
+    path(
+        "painel/galeria/<int:pk>/editar/",
+        views.MidiaUpdate.as_view(),
+        name="midia_editar"
+    ),
+
+    path(
+        "painel/galeria/<int:pk>/excluir/",
+        views.MidiaDelete.as_view(),
+        name="midia_excluir"
+    ),
+]
+
+
+# =========================================================
 # MATRÍCULAS E AULAS
 # =========================================================
 

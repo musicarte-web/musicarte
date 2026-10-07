@@ -363,6 +363,13 @@ EventoList, EventoCreate, EventoUpdate, EventoDelete = crud(
     ["titulo", "data", "local"],
 )
 
+MidiaList, MidiaCreate, MidiaUpdate, MidiaDelete = crud(
+    Midia,
+    MidiaForm,
+    "Midia",
+    ["titulo", "data"],
+)
+
 
 # =========================================================
 # MATRÍCULAS
