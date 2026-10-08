@@ -73,9 +73,10 @@ select {
 }
 
 .brand img {
-    width: 150px;
-    height: auto;
-    display: block;
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    border-radius: 10px;
 }
 
 .main-nav {
