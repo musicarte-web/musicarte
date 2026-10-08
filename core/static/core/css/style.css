@@ -70,58 +70,12 @@ select {
 .brand {
     display: flex;
     align-items: center;
-    gap: 10px
 }
 
-.brand-name {
-    font-size: 22px;
-    font-weight: 800;
-    letter-spacing: -.04em
-}
-
-.brand-name span {
-    color: var(--coral)
-}
-
-.brand-symbol {
-    position: relative;
-    width: 44px;
-    height: 35px;
-    display: inline-block
-}
-
-.brand-symbol i,
-.brand-symbol b,
-.brand-symbol em {
-    position: absolute;
+.brand img {
+    width: 150px;
+    height: auto;
     display: block;
-    width: 10px;
-    border-radius: 9px;
-    transform-origin: bottom
-}
-
-.brand-symbol i {
-    height: 29px;
-    left: 8px;
-    bottom: 2px;
-    background: var(--purple);
-    transform: rotate(31deg)
-}
-
-.brand-symbol b {
-    height: 32px;
-    left: 21px;
-    bottom: 2px;
-    background: var(--coral);
-    transform: rotate(-28deg)
-}
-
-.brand-symbol em {
-    height: 25px;
-    left: 31px;
-    bottom: 1px;
-    background: var(--aqua);
-    transform: rotate(25deg)
 }
 
 .main-nav {
