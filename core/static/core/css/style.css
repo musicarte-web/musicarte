@@ -151,7 +151,7 @@ select {
 
 .nav-pill {
     padding: 10px 17px;
-    background: black;
+    background: var(--roxo);
     color: #fff;
     border-radius: 12px;
     box-shadow: 0 8px 22px rgba(255, 95, 109, .18)
