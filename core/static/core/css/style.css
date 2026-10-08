@@ -81,7 +81,7 @@ select {
 .brand {
     display: flex;
     align-items: center;
-    gap: 13px;
+    gap: 10px;
 }
 
 .brand img {
