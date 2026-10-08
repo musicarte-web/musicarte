@@ -296,7 +296,7 @@ select {
 .blob.yellow {
     width: 180px;
     height: 140px;
-    background: var(--vermelho);
+    background: var(--azulesc);
     border-radius: 55% 45% 62% 38%;
     top: 6px;
     left: 20px;
@@ -306,7 +306,7 @@ select {
 .blob.coral {
     width: 165px;
     height: 165px;
-    background: var(--lilas);
+    background: var(--azulmed);
     border-radius: 50%;
     right: 10px;
     top: 55px
