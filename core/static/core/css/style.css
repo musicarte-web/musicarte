@@ -79,6 +79,16 @@ select {
     border-radius: 10px;
 }
 
+.brand-name {
+    font-size: 22px;
+    font-weight: 800;
+    letter-spacing: -.04em
+}
+
+.brand-name span {
+    color: var(--coral)
+}
+
 .main-nav {
     display: flex;
     align-items: center;
