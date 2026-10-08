@@ -342,8 +342,17 @@ select {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 15px;
-    background: linear-gradient(90deg, rgba(91, 75, 219, .07), rgba(255, 95, 109, .06), rgba(255, 198, 87, .08), rgba(32, 191, 169, .07));
-    border-block: 1px solid rgba(25, 23, 44, .04)
+
+    background: linear-gradient(90deg,
+            rgba(91, 75, 219, .07),
+            rgba(255, 95, 109, .06),
+            rgba(255, 198, 87, .08),
+            rgba(32, 191, 169, .07));
+
+    border-block: 1px solid rgba(25, 23, 44, .04);
+
+    /* separa das próximas seções */
+    margin-bottom: 70px;
 }
 
 .art-strip>div {
@@ -549,10 +558,10 @@ select {
 }
 
 .home-duo {
-    padding-block: 20px 90px;
+    padding-block: 0 90px;
     display: grid;
     grid-template-columns: .8fr 1.2fr;
-    gap: 18px
+    gap: 18px;
 }
 
 .event-teaser,
