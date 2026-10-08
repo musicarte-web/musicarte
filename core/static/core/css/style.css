@@ -338,21 +338,16 @@ select {
 }
 
 .art-strip {
+    margin-bottom: 100px !important; 
+    position: relative;
+    z-index: 2;
     padding: 35px max(24px, calc((100% - 1040px)/2));
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 15px;
-
-    background: linear-gradient(90deg,
-            rgba(91, 75, 219, .07),
-            rgba(255, 95, 109, .06),
-            rgba(255, 198, 87, .08),
-            rgba(32, 191, 169, .07));
-
-    border-block: 1px solid rgba(25, 23, 44, .04);
-
-    /* separa das próximas seções */
-    margin-bottom: 70px;
+    background: linear-gradient(90deg, rgba(91, 75, 219, .07), rgba(255, 95, 109, .06), rgba(255, 198, 87, .08), rgba(32, 191, 169, .07));
+    border-block: 1px solid rgba(25, 23, 44, .04)
+    
 }
 
 .art-strip>div {
@@ -558,10 +553,13 @@ select {
 }
 
 .home-duo {
-    padding-block: 0 90px;
+    margin-bottom: 100px !important;
+    position: relative;
+    z-index: 2;
+    padding-block: 20px 90px;
     display: grid;
     grid-template-columns: .8fr 1.2fr;
-    gap: 18px;
+    gap: 18px
 }
 
 .event-teaser,
