@@ -187,7 +187,7 @@ select {
 }
 
 .btn.coral {
-    background: var(--roxo);
+    background: black;
     color: #fff;
     box-shadow: 0 10px 28px rgba(255, 95, 109, .22)
 }
