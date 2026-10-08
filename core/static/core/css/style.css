@@ -133,6 +133,10 @@ select {
     color: var(--vermelhoviv);
 }
 
+.brand-web {
+    color: var(--roxo);
+}
+
 .main-nav {
     display: flex;
     align-items: center;
@@ -167,7 +171,7 @@ select {
 
 .kicker {
     display: inline-block;
-    color: var(--purple);
+    color: var(--rosa);
     font-size: 10px;
     font-weight: 800;
     letter-spacing: .21em
