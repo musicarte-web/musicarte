@@ -133,10 +133,6 @@ select {
     color: var(--vermelhoviv);
 }
 
-.brand-web {
-    color: var(--roxo);
-}
-
 .main-nav {
     display: flex;
     align-items: center;
@@ -1663,7 +1659,7 @@ th {
     margin-left: 6px;
     padding: 3px 6px;
 
-    background: #5B4BDB;
+    background: var(--roxo);
     color: #ffffff;
 
     border-radius: 6px;
