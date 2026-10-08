@@ -146,7 +146,7 @@ select {
 }
 
 .main-nav>a:not(.nav-pill):hover {
-    color: var(--purple)
+    color: var(--rosa)
 }
 
 .nav-pill {
@@ -202,7 +202,7 @@ select {
 }
 
 .text-link {
-    color: var(--purple);
+    color: var(--rosa);
     font-weight: 800;
     font-size: 13px
 }
@@ -364,7 +364,7 @@ select {
 }
 
 .art-icon.purple {
-    color: var(--purple);
+    color: var(--rosa);
     background: #e8e5ff
 }
 
@@ -453,7 +453,7 @@ select {
     align-items: center;
     justify-content: center;
     background: #e8e5ff;
-    color: var(--purple)
+    color: var(--rosa)
 }
 
 .card-art span {
@@ -496,7 +496,7 @@ select {
 
 .card-copy>small,
 .person-card small {
-    color: var(--purple);
+    color: var(--rosa);
     font-size: 9px;
     font-weight: 800;
     letter-spacing: .16em
@@ -516,7 +516,7 @@ select {
 }
 
 .card-copy b {
-    color: var(--purple);
+    color: var(--rosa);
     font-size: 12px
 }
 
@@ -650,7 +650,7 @@ select {
 .history-art {
     height: 330px;
     border-radius: 46% 54% 48% 52%;
-    background: linear-gradient(145deg, var(--purple), #7668e8);
+    background: linear-gradient(145deg, var(--rosa), #7668e8);
     color: #fff;
     display: flex;
     flex-direction: column;
@@ -825,7 +825,7 @@ select {
 }
 
 .event-content small {
-    color: var(--purple);
+    color: var(--rosa);
     font-weight: 700
 }
 
@@ -941,7 +941,7 @@ select {
 .gallery-shapes i {
     width: 75px;
     height: 75px;
-    background: var(--purple);
+    background: var(--rosa);
     left: 0
 }
 
@@ -996,7 +996,7 @@ select {
     display: grid;
     place-items: center;
     background: #e8e5ff;
-    color: var(--purple);
+    color: var(--rosa);
     font-family: 'Playfair Display', serif;
     font-size: 65px
 }
@@ -1041,7 +1041,7 @@ select {
 
 .back-link {
     display: inline-block;
-    color: var(--purple);
+    color: var(--rosa);
     font-size: 13px;
     font-weight: 800;
     margin-bottom: 28px
@@ -1067,7 +1067,7 @@ select {
     align-items: center;
     justify-content: center;
     background: linear-gradient(145deg, #e8e5ff, #ffe5e7);
-    color: var(--purple)
+    color: var(--rosa)
 }
 
 .detail-placeholder span {
@@ -1196,7 +1196,7 @@ select {
 
 .stats b {
     display: block;
-    color: var(--purple);
+    color: var(--rosa);
     font-family: 'Playfair Display', serif;
     font-size: 34px
 }
@@ -1210,7 +1210,7 @@ select {
 .dash-grid a {
     padding: 22px;
     border-radius: 14px;
-    background: var(--purple);
+    background: var(--rosa);
     color: #fff;
     font-weight: 700;
     display: flex;
@@ -1269,7 +1269,7 @@ th {
 }
 
 .actions a {
-    color: var(--purple);
+    color: var(--rosa);
     font-weight: 700
 }
 
@@ -1281,7 +1281,7 @@ th {
 .tag {
     padding: 5px 9px;
     background: #e8e5ff;
-    color: var(--purple);
+    color: var(--rosa);
     border-radius: 99px
 }
 
@@ -2093,7 +2093,7 @@ th {
 }
 
 .public-form-field .form-control:focus {
-    border-color: var(--purple);
+    border-color: var(--rosa);
     box-shadow: 0 0 0 3px rgba(106, 76, 147, 0.10);
 }
 
