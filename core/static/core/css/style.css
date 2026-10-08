@@ -151,7 +151,7 @@ select {
 
 .nav-pill {
     padding: 10px 17px;
-    background: var(--roxo);
+    background: black;
     color: #fff;
     border-radius: 12px;
     box-shadow: 0 8px 22px rgba(255, 95, 109, .18)
@@ -187,7 +187,7 @@ select {
 }
 
 .btn.coral {
-    background: black;
+    background: var(--roxo);
     color: #fff;
     box-shadow: 0 10px 28px rgba(255, 95, 109, .22)
 }
