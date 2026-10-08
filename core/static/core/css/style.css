@@ -151,7 +151,7 @@ select {
 
 .nav-pill {
     padding: 10px 17px;
-    background: var(--coral);
+    background: var(--roxo);
     color: #fff;
     border-radius: 12px;
     box-shadow: 0 8px 22px rgba(255, 95, 109, .18)
@@ -187,7 +187,7 @@ select {
 }
 
 .btn.coral {
-    background: var(--coral);
+    background: var(--roxo);
     color: #fff;
     box-shadow: 0 10px 28px rgba(255, 95, 109, .22)
 }
@@ -234,7 +234,7 @@ select {
 .hero-copy h1 em,
 .page-intro h1 em,
 .inner-hero h1 em {
-    color: var(--coral);
+    color: var(--roxo);
     font-style: normal
 }
 
@@ -306,7 +306,7 @@ select {
 .blob.coral {
     width: 165px;
     height: 165px;
-    background: var(--coral);
+    background: var(--roxo);
     border-radius: 50%;
     right: 10px;
     top: 55px
