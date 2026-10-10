@@ -339,19 +339,22 @@ def crud(model, form, prefix, fields):
     )
 
 class SafeDeleteView(LoginRequiredMixin, DeleteView):
-    def form_valid(self, form):
-        response = super().form_valid(form)
-
-        messages.success(
-            self.request,
-            "Registro excluído com sucesso."
-        )
+    def dispatch(self, request, *args, **kwargs):
+        response = super().dispatch(request, *args, **kwargs)
 
         response["Cache-Control"] = "no-store, no-cache, must-revalidate, max-age=0"
         response["Pragma"] = "no-cache"
         response["Expires"] = "0"
 
         return response
+
+    def form_valid(self, form):
+        messages.success(
+            self.request,
+            "Registro excluído com sucesso."
+        )
+
+        return super().form_valid(form)
 
 AlunoList, AlunoCreate, AlunoUpdate, AlunoDelete = crud(
     Aluno,

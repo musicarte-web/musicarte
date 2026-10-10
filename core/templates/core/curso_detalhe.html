@@ -1,110 +1,28 @@
 {% extends 'core/base.html' %}
 
-{% block title %}{{ curso.nome }} • Musicarte{% endblock %}
-
 {% block content %}
+<section class="form-page">
+    <h1>{{ titulo }}</h1>
 
-<section class="course-detail shell">
+    <div class="form-card">
+        <p>
+            Tem certeza que deseja excluir
+            <strong>{{ object }}</strong>?
+        </p>
 
-    <a class="back-link" href="{% url 'cursos' %}">
-        ← Voltar para oficinas
-    </a>
+        <form method="post">
+            {% csrf_token %}
 
-    <div class="course-detail-grid">
-
-        <!-- FOTO DA OFICINA -->
-        <div>
-            {% if curso.imagem %}
-
-            <img class="course-detail-image" src="{{ curso.imagem.url }}" alt="{{ curso.nome }}">
-
-            {% else %}
-
-            <div class="course-detail-image detail-placeholder">
-                <span>{{ curso.nome|slice:':1' }}</span>
-                <small>foto da oficina em breve</small>
-            </div>
-
-            {% endif %}
-        </div>
-
-
-        <!-- INFORMAÇÕES -->
-        <div class="course-detail-copy">
-
-            <span class="kicker">OFICINA</span>
-
-            <h1>{{ curso.nome }}</h1>
-
-            <p class="detail-lead">
-                {{ curso.descricao }}
-            </p>
-
-
-            <div class="facts">
-
-                <div>
-                    <small>INSTRUTOR(A)</small>
-                    <b>{{ curso.instrutor|default:'A definir' }}</b>
-                </div>
-
-                <div>
-                    <small>HORÁRIO</small>
-                    <b>{{ curso.horario|default:'A definir' }}</b>
-                </div>
-
-                <div>
-                    <small>CARGA HORÁRIA</small>
-                    <b>{{ curso.carga_horaria }}h</b>
-                </div>
-
-                <div>
-                    <small>LOCAL</small>
-                    <b>{{ curso.local|default:'A definir' }}</b>
-                </div>
-
-            </div>
-
-
-            <!-- INSCRIÇÃO -->
-
-            <div class="course-enrollment">
-
-                {% if vagas_disponiveis > 0 %}
-
-                <div class="vacancies">
-                    <span class="vacancy-dot"></span>
-
-                    <strong>
-                        {{ vagas_disponiveis }}
-                        vaga{{ vagas_disponiveis|pluralize }}
-                        disponível{{ vagas_disponiveis|pluralize:"is" }}
-                    </strong>
-                </div>
-
-                <a class="btn coral enrollment-button" href="{% url 'inscricao_oficina' curso.pk %}">
-                    Inscreva-se nesta oficina
-                    <span>→</span>
+            <div class="form-actions">
+                <a class="btn ghost dark" href="{% url lista_url %}">
+                    Cancelar
                 </a>
 
-                <small class="enrollment-note">
-                    Preencha seus dados para solicitar sua inscrição.
-                </small>
-
-                {% else %}
-
-                <div class="no-vacancies">
-                    <strong>Oficina sem vagas disponíveis no momento.</strong>
-                </div>
-
-                {% endif %}
-
+                <button type="submit" class="btn danger-btn">
+                    Sim, excluir
+                </button>
             </div>
-
-        </div>
-
+        </form>
     </div>
-
 </section>
-
 {% endblock %}
