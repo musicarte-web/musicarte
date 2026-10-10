@@ -21,7 +21,7 @@
     --vermelho: #F4374A;
     --vermelhoviv: #F21C28;
 
-    --fundo: #ceeaff;
+    --fundo: #669cc5;
     
 }
 
@@ -75,7 +75,7 @@ select {
     position: sticky;
     top: 0;
     z-index: 100;
-    background: rgba(255, 249, 243, .94);
+    background: var(--ink);
     border-bottom: 1px solid rgba(25, 23, 44, .06);
     backdrop-filter: blur(14px)
 }
