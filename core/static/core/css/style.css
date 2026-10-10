@@ -136,6 +136,7 @@ select {
 }
 
 .main-nav {
+    color: black;
     display: flex;
     align-items: center;
     gap: 26px;
@@ -156,7 +157,6 @@ select {
     background: var(--roxo);
     color: #fff;
     border-radius: 12px;
-    box-shadow: 0 8px 22px rgba(255, 95, 109, .18)
 }
 
 .menu-btn {
