@@ -136,7 +136,7 @@ select {
 }
 
 .main-nav {
-    color: black;
+    color: var(--white);
     display: flex;
     align-items: center;
     gap: 26px;
@@ -155,7 +155,7 @@ select {
 .nav-pill {
     padding: 10px 17px;
     background: var(--roxo);
-    color: #fff;
+    color: var(--white);
     border-radius: 12px;
 }
 
