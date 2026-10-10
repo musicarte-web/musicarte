@@ -347,7 +347,7 @@ select {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 15px;
-    background: var(--roxo;
+    background: var(--roxo);
     border-block: 3px solid var(--ink)
 }
 
