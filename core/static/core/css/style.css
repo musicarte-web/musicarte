@@ -21,7 +21,7 @@
     --vermelhoviv: #F21C28;
 
     --fundo: #B8B4D9;
-    --fundo2: rgb(196, 190, 219);
+    --fundo2: rgba(255, 255, 255, .3);
 }
 
 * {
@@ -194,7 +194,7 @@ select {
 
 .btn.sobre {
     border: 2px solid var(--roxo);
-    background: rgba(255, 255, 255, .3)
+    background: var(--fundo2);
 }
 
 .btn:hover {
