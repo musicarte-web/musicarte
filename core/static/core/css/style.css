@@ -20,7 +20,7 @@
     --vermelho: #F4374A;
     --vermelhoviv: #F21C28;
 
-    --fundo: #a1c7e4;
+    --fundo: #B8B4D9;
 
 }
 
@@ -34,7 +34,7 @@ html {
 
 body {
     margin: 0;
-    background: #B8B4D9;
+    background: var(--fundo);
     color: var(--ink);
     font-family: 'DM Sans', sans-serif
 }
@@ -163,7 +163,7 @@ select {
     border: 0;
     background: none;
     font-size: 25px;
-    color: var(--ink)
+    color: var(--white)
 }
 
 .kicker {
@@ -1457,7 +1457,7 @@ th {
         right: 18px;
         top: 67px;
         padding: 18px;
-        background: #fff;
+        background: var(--fundo);
         border: 1px solid var(--line);
         border-radius: 15px;
         flex-direction: column;
@@ -1466,6 +1466,10 @@ th {
 
     .main-nav.open {
         display: flex
+    }
+
+    .main-nav.open a{
+        color: var(--ink);
     }
 
     .menu-btn {
