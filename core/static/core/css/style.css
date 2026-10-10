@@ -20,6 +20,8 @@
     --rosa: #EA327A;
     --vermelho: #F4374A;
     --vermelhoviv: #F21C28;
+
+    --fundo: #ceeaff;
     
 }
 
@@ -33,7 +35,7 @@ html {
 
 body {
     margin: 0;
-    background: var(--cream);
+    background: var(--fundo);
     color: var(--ink);
     font-family: 'DM Sans', sans-serif
 }
