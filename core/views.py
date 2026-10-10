@@ -242,7 +242,6 @@ class SearchList(LoginRequiredMixin, ListView):
 
         return qs
 
-
 class MsgMixin:
     success_url = reverse_lazy("painel")
 
@@ -253,12 +252,16 @@ class MsgMixin:
         )
         return super().form_valid(form)
 
-    def delete(self, *args, **kwargs):
+    def form_valid_delete(self):
         messages.success(
             self.request,
             "Registro excluído com sucesso."
         )
-        return super().delete(*args, **kwargs)
+        return super().delete(
+            self.request,
+            *self.args,
+            **self.kwargs
+        )
 
 
 def crud(model, form, prefix, fields):
@@ -329,6 +332,7 @@ def crud(model, form, prefix, fields):
                 ),
                 "extra_context": {
                     "titulo": f"Excluir {prefix}"
+                    "lista_url": f"{prefix.lower()}_lista",
                 },
             },
         ),
