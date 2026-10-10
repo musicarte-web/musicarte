@@ -1221,38 +1221,38 @@ select {
 .dash-grid a {
     padding: 22px;
     border-radius: 14px;
-    color: black;
+    background-color: var(--muted);
     font-weight: 700;
     display: flex;
     justify-content: space-between
 }
 
 .dash-grid .btn-al{
-    background-color: var(--aqua);
+    color: var(--aqua);
 }
 
 .dash-grid .btn-i {
-    background-color: var(--azulmed);
+    color: var(--azulmed);
 }
 
 .dash-grid .btn-o {
-    background-color: var(--azulvib);
+    color: var(--azulvib);
 }
 
 .dash-grid .btn-m {
-    background-color: var(--roxo);
+    color: var(--roxo);
 }
 
 .dash-grid .btn-au {
-    background-color: var(--lilas);
+    color: var(--lilas);
 }
 
 .dash-grid .btn-e {
-    background-color: var(--rosa);
+    color: var(--rosa);
 }
 
 .dash-grid .btn-g {
-    background-color: var(--vermelho);
+    color: var(--vermelho);
     grid-column: 1 / 3;
     width: 50%;
     justify-self: center;
