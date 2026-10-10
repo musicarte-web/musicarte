@@ -18,13 +18,12 @@
         <div class="text"><b>{{ eventos }}</b><span>Eventos</span></div>
     </div>
     <div class="dash-grid">
-        <a href="{% url 'aluno_lista' %}" class="letra-m">Alunos <span>→</span></a>
-        <a href="{% url 'instrutor_lista' %}" class="letra-u">Instrutores <span>→</span></a>
-        <a href="{% url 'curso_lista' %}" class="letra-s">Oficinas <span>→</span></a>
-        <a href="{% url 'matricula_lista' %}" class="letra-i">Matrículas <span>→</span></a>
-        <a href="{% url 'aula_lista' %}" class="letra-c">Aulas e Frequência <span>→</span></a>
-        <a href="{% url 'evento_lista' %}" class="letra-a">Eventos <span>→</span></a>
-        <a href="{% url 'midia_lista' %}" class="letra-r" class="botao-galeria">Galeria <span>→</span></a>
-        <a href="/admin/" class="letra-t">Admin Django <span>→</span></a>
+        <a href="{% url 'aluno_lista' %}" class="btn-al">Alunos <span>→</span></a>
+        <a href="{% url 'instrutor_lista' %}" class="btn-i">Instrutores <span>→</span></a>
+        <a href="{% url 'curso_lista' %}" class="btn-o">Oficinas <span>→</span></a>
+        <a href="{% url 'matricula_lista' %}" class="btn-m">Matrículas <span>→</span></a>
+        <a href="{% url 'aula_lista' %}" class="btn-au">Aulas <span>→</span></a>
+        <a href="{% url 'evento_lista' %}" class="btn-e">Eventos <span>→</span></a>
+        <a href="{% url 'midia_lista' %}" class="btn-g">Galeria <span>→</span></a>
     </div>
 </section>{% endblock %}

@@ -1221,18 +1221,42 @@ select {
 .dash-grid a {
     padding: 22px;
     border-radius: 14px;
-    background: var(--rosa);
-    color: #fff;
+    color: black;
     font-weight: 700;
     display: flex;
     justify-content: space-between
 }
 
-/*.dash-grid .botao-galeria {
+.dash-grid .btn-al{
+    background-color: var(--aqua);
+}
+
+.dash-grid .btn-i {
+    background-color: var(--azulmed);
+}
+
+.dash-grid .btn-o {
+    background-color: var(--azulvib);
+}
+
+.dash-grid .btn-m {
+    background-color: var(--roxo);
+}
+
+.dash-grid .btn-au {
+    background-color: var(--lilas);
+}
+
+.dash-grid .btn-e {
+    background-color: var(--rosa);
+}
+
+.dash-grid .btn-g {
+    background-color: var(--vermelho);
     grid-column: 1 / 3;
     width: 50%;
     justify-self: center;
-}*/
+}
 
 .search {
     display: flex;
