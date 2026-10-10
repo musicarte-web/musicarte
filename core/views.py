@@ -331,7 +331,7 @@ def crud(model, form, prefix, fields):
                     f"{prefix.lower()}_lista"
                 ),
                 "extra_context": {
-                    "titulo": f"Excluir {prefix}"
+                    "titulo": f"Excluir {prefix}",
                     "lista_url": f"{prefix.lower()}_lista",
                 },
             },
