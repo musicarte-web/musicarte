@@ -6,6 +6,8 @@ from django.db.models import Q
 from django.shortcuts import render, get_object_or_404, redirect
 from django.urls import reverse_lazy
 from django.views.generic import ListView, CreateView, UpdateView, DeleteView
+from django.http import Http404
+from django.shortcuts import redirect
 
 from .models import *
 from .forms import *
@@ -355,6 +357,14 @@ class SafeDeleteView(LoginRequiredMixin, DeleteView):
         )
 
         return super().form_valid(form)
+
+    def get(self, request, *args, **kwargs):
+        try:
+            self.object = self.get_object()
+        except Http404:
+            return redirect(self.get_success_url())
+
+        return super().get(request, *args, **kwargs)
 
 AlunoList, AlunoCreate, AlunoUpdate, AlunoDelete = crud(
     Aluno,
