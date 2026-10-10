@@ -35,7 +35,7 @@ html {
 
 body {
     margin: 0;
-    background: var(--aqua);
+    background: var(--ciano);
     color: var(--ink);
     font-family: 'DM Sans', sans-serif
 }
@@ -1214,8 +1214,8 @@ select {
 }
 
 .stats .btn-al {
-    color: var(--aqua);
-    border: 2px solid var(--aqua);
+    color: var(--ciano);
+    border: 2px solid var(--ciano);
 }
 
 .stats .btn-i {
@@ -1259,8 +1259,8 @@ select {
 }
 
 .dash-grid .btn-al{
-    color: var(--aqua);
-    border: 2px solid var(--aqua);
+    color: var(--ciano);
+    border: 2px solid var(--ciano);
 }
 
 .dash-grid .btn-i {
