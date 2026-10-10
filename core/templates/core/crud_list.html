@@ -20,9 +20,15 @@
                         obj.data|date:'d/m/Y' }}{% elif c == 'local' %}{{ obj.local|default:'—' }}{% endif %}</td>{%
                     endfor %}<td class="actions"><a href="{% url editar_url obj.pk %}">Editar</a><a class="danger"
                             href="{% url excluir_url obj.pk %}">Excluir</a></td>
-                </tr>{% empty %}<tr>
+                </tr>
+                {% empty %}
+                <tr>
                     <td colspan="9">Nenhum registro encontrado.</td>
-                </tr>{% endfor %}</tbody>
+                </tr>
+                {% endfor %}
+            </tbody>
         </table>
-    </div>{% include 'core/pagination.html' %}
-</section>{% endblock %}
+    </div>
+    {% include 'core/pagination.html' %}
+</section>
+{% endblock %}
