@@ -1199,7 +1199,7 @@ select {
 }
 
 .stats div {
-    background: #fff;
+    background: var(--cream);
     border: 1px solid var(--line);
     padding: 22px;
     border-radius: 15px
@@ -1207,7 +1207,6 @@ select {
 
 .stats b {
     display: block;
-    color: var(--rosa);
     font-family: 'Playfair Display', serif;
     font-size: 34px
 }
@@ -1221,7 +1220,7 @@ select {
 .dash-grid a {
     padding: 22px;
     border-radius: 14px;
-    background-color: var(--muted);
+    background-color: var(--cream);
     font-weight: 700;
     display: flex;
     justify-content: space-between
