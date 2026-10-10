@@ -6,7 +6,7 @@
     --aqua: #20bfa9;
     --cream: #fff9f3;
     --ink: #19172c;
-    --muted: #6d697b;
+    --muted: #a9a4bc;
     --line: #eae4e1;
     --white: #fff;
 
@@ -21,7 +21,7 @@
     --vermelhoviv: #F21C28;
 
     --fundo: #B8B4D9;
-
+    --fundo2: rgb(196, 190, 219);
 }
 
 * {
@@ -1457,7 +1457,7 @@ th {
         right: 18px;
         top: 67px;
         padding: 18px;
-        background: var(--muted);
+        background: var(--fundo2);
         border: 2px solid var(--roxo);
         border-radius: 15px;
         flex-direction: column;
