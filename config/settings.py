@@ -22,8 +22,12 @@ TEMPLATES=[{'BACKEND':'django.template.backends.django.DjangoTemplates','DIRS':[
 WSGI_APPLICATION='config.wsgi.application'
 DATABASE_URL = os.environ.get("DATABASE_URL")
 
+DATABASE_URL = os.environ.get("DATABASE_URL")
+
 if not DATABASE_URL:
-    raise Exception("DATABASE_URL não encontrada")
+    raise RuntimeError(
+        "A variável de ambiente DATABASE_URL não foi configurada."
+    )
 
 DATABASES = {
     "default": dj_database_url.parse(

@@ -323,7 +323,7 @@ def crud(model, form, prefix, fields):
 
         type(
             prefix + "Delete",
-            (SafeDeleteView),
+            (SafeDeleteView,),
             {
                 "model": model,
                 "template_name": "core/confirm_delete.html",
