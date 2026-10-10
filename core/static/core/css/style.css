@@ -1458,7 +1458,7 @@ th {
         top: 67px;
         padding: 18px;
         background: var(--fundo);
-        border: 1px solid var(--line);
+        border: 2px solid var(--ink);
         border-radius: 15px;
         flex-direction: column;
         align-items: stretch
@@ -1469,7 +1469,7 @@ th {
     }
 
     .main-nav.open a{
-        color: var(--ink);
+        color: var(--white);
     }
 
     .menu-btn {
