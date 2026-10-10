@@ -8,6 +8,7 @@ from django.urls import reverse_lazy
 from django.views.generic import ListView, CreateView, UpdateView, DeleteView
 from django.http import Http404
 from django.shortcuts import redirect
+from django.urls import reverse
 
 from .models import *
 from .forms import *
@@ -332,6 +333,7 @@ def crud(model, form, prefix, fields):
                 "success_url": reverse_lazy(
                     f"{prefix.lower()}_lista"
                 ),
+                "lista_url_name": f"{prefix.lower()}_lista",
                 "extra_context": {
                     "titulo": f"Excluir {prefix}",
                     "lista_url": f"{prefix.lower()}_lista",
@@ -344,27 +346,31 @@ class SafeDeleteView(LoginRequiredMixin, DeleteView):
     def dispatch(self, request, *args, **kwargs):
         response = super().dispatch(request, *args, **kwargs)
 
-        response["Cache-Control"] = "no-store, no-cache, must-revalidate, max-age=0"
+        response["Cache-Control"] = (
+            "no-store, no-cache, must-revalidate, max-age=0"
+        )
         response["Pragma"] = "no-cache"
         response["Expires"] = "0"
 
         return response
+
+    def get(self, request, *args, **kwargs):
+        try:
+            self.object = self.get_object()
+        except Http404:
+            return redirect(self.get_list_url())
+
+        return super().get(request, *args, **kwargs)
+
+    def get_list_url(self):
+        return reverse(self.lista_url_name)
 
     def form_valid(self, form):
         messages.success(
             self.request,
             "Registro excluído com sucesso."
         )
-
         return super().form_valid(form)
-
-    def get(self, request, *args, **kwargs):
-        try:
-            self.object = self.get_object()
-        except Http404:
-            return redirect(self.get_success_url())
-
-        return super().get(request, *args, **kwargs)
 
 AlunoList, AlunoCreate, AlunoUpdate, AlunoDelete = crud(
     Aluno,
