@@ -9,7 +9,6 @@
     --muted: #6d697b;
     --line: #eae4e1;
     --white: #fff;
-    --shadow: 0 18px 55px rgba(25, 23, 44, .09);
 
     --ciano: #52D1D7;
     --azulmed: #3792C9;
@@ -22,7 +21,7 @@
     --vermelhoviv: #F21C28;
 
     --fundo: #a1c7e4;
-    
+
 }
 
 * {
@@ -191,7 +190,6 @@ select {
 .btn.coral {
     background: var(--roxo);
     color: #fff;
-    box-shadow: 0 10px 28px rgba(255, 95, 109, .22)
 }
 
 .btn.outline {
@@ -274,7 +272,6 @@ select {
     z-index: 3;
     border-radius: 46% 54% 44% 56%/56% 43% 57% 44%;
     background: linear-gradient(145deg, #6657e4, #493bbd);
-    box-shadow: 0 30px 70px rgba(91, 75, 219, .2);
     display: grid;
     place-items: center;
     color: #fff
@@ -340,11 +337,10 @@ select {
     font-size: 18px;
     font-style: italic;
     transform: rotate(-8deg);
-    box-shadow: var(--shadow)
 }
 
 .art-strip {
-    margin-bottom: 100px !important; 
+    margin-bottom: 100px !important;
     position: relative;
     z-index: 2;
     padding: 35px max(24px, calc((100% - 1040px)/2));
@@ -353,7 +349,6 @@ select {
     gap: 15px;
     background: linear-gradient(90deg, rgba(91, 75, 219, .07), rgba(255, 95, 109, .06), rgba(255, 198, 87, .08), rgba(32, 191, 169, .07));
     border-block: 1px solid rgba(25, 23, 44, .04)
-    
 }
 
 .art-strip>div {
@@ -441,13 +436,11 @@ select {
     background: #fff;
     border: 1px solid var(--line);
     border-radius: 18px;
-    box-shadow: 0 8px 25px rgba(25, 23, 44, .045);
     transition: .22s
 }
 
 .workshop-card:hover {
     transform: translateY(-5px);
-    box-shadow: var(--shadow)
 }
 
 .workshop-card>img,
@@ -669,7 +662,6 @@ select {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 25px 60px rgba(91, 75, 219, .18)
 }
 
 .history-art span {
@@ -752,7 +744,6 @@ select {
     height: 490px;
     object-fit: cover;
     border-radius: 24px;
-    box-shadow: 0 25px 60px rgba(0, 0, 0, .25)
 }
 
 .coordination h2 {
@@ -1149,7 +1140,6 @@ select {
     padding: 28px;
     border: 1px solid var(--line);
     border-radius: 18px;
-    box-shadow: var(--shadow)
 }
 
 .form-card p {
@@ -1258,7 +1248,7 @@ select {
     justify-content: space-between
 }
 
-.dash-grid .btn-al{
+.dash-grid .btn-al {
     color: var(--ciano);
     border: 2px solid var(--ciano);
 }
@@ -1385,7 +1375,6 @@ th {
     color: #fff;
     padding: 12px 17px;
     border-radius: 10px;
-    box-shadow: var(--shadow)
 }
 
 .site-footer {
@@ -1471,7 +1460,6 @@ th {
         background: #fff;
         border: 1px solid var(--line);
         border-radius: 15px;
-        box-shadow: var(--shadow);
         flex-direction: column;
         align-items: stretch
     }
@@ -1765,9 +1753,6 @@ th {
 
     border-radius: 30px;
 
-    box-shadow:
-        0 25px 60px rgba(25, 23, 44, 0.16);
-
     transform: rotate(1.5deg);
 }
 
@@ -1829,15 +1814,9 @@ th {
 
     overflow: hidden;
 
-    /* Cantos discretos */
     border-radius: 20px;
 
-    /* Sem inclinação */
     transform: none;
-
-    /* Sombra bem mais leve */
-    box-shadow:
-        0 18px 45px rgba(25, 23, 44, 0.12);
 
     background: #ffffff;
 }
@@ -1953,9 +1932,6 @@ th {
         height: 270px;
 
         border-radius: 16px;
-
-        box-shadow:
-            0 12px 30px rgba(25, 23, 44, 0.10);
     }
 
     .hero-project-photo img {
@@ -2120,7 +2096,6 @@ th {
     border: 1px solid rgba(31, 29, 46, 0.08);
     border-radius: 24px;
     background: #fff;
-    box-shadow: 0 20px 55px rgba(25, 23, 44, 0.08);
 }
 
 .enrollment-form-card h2 {
@@ -2162,12 +2137,10 @@ th {
     font-size: 14px;
     transition:
         border-color 0.2s ease,
-        box-shadow 0.2s ease;
 }
 
 .public-form-field .form-control:focus {
     border-color: var(--rosa);
-    box-shadow: 0 0 0 3px rgba(106, 76, 147, 0.10);
 }
 
 .public-form-field .form-control::placeholder {
