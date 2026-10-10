@@ -10,21 +10,21 @@
         </form>
     </div>
     <div class="stats">
-        <div class="letra-m"><b>{{ alunos }}</b><span>Alunos</span></div>
-        <div class="letra-s"><b>{{ instrutores }}</b><span>Instrutores</span></div>
-        <div class="letra-c"><b>{{ cursos }}</b><span>Oficinas</span></div>
-        <div class="letra-a"><b>{{ matriculas }}</b><span>Matrículas ativas</span></div>
-        <div class="letra-r"><b>{{ aulas }}</b><span>Aulas</span></div>
-        <div class="letra-t"><b>{{ eventos }}</b><span>Eventos</span></div>
+        <div class="text"><b>{{ alunos }}</b><span>Alunos</span></div>
+        <div class="text"><b>{{ instrutores }}</b><span>Instrutores</span></div>
+        <div class="text"><b>{{ cursos }}</b><span>Oficinas</span></div>
+        <div class="text"><b>{{ matriculas }}</b><span>Matrículas ativas</span></div>
+        <div class="text"><b>{{ aulas }}</b><span>Aulas</span></div>
+        <div class="text"><b>{{ eventos }}</b><span>Eventos</span></div>
     </div>
     <div class="dash-grid">
-        <a href="{% url 'aluno_lista' %}">Alunos <span>→</span></a>
-        <a href="{% url 'instrutor_lista' %}">Instrutores <span>→</span></a>
-        <a href="{% url 'curso_lista' %}">Oficinas <span>→</span></a>
-        <a href="{% url 'matricula_lista' %}">Matrículas <span>→</span></a>
-        <a href="{% url 'aula_lista' %}">Aulas e Frequência <span>→</span></a>
-        <a href="{% url 'evento_lista' %}">Eventos <span>→</span></a>
-        <a href="{% url 'midia_lista' %}" class="botao-galeria">Galeria <span>→</span></a>
-        <a href="/admin/">Admin Django <span>→</span></a>
+        <a href="{% url 'aluno_lista' %}" class="letra-m">Alunos <span>→</span></a>
+        <a href="{% url 'instrutor_lista' %}" class="letra-u">Instrutores <span>→</span></a>
+        <a href="{% url 'curso_lista' %}" class="letra-s">Oficinas <span>→</span></a>
+        <a href="{% url 'matricula_lista' %}" class="letra-i">Matrículas <span>→</span></a>
+        <a href="{% url 'aula_lista' %}" class="letra-c">Aulas e Frequência <span>→</span></a>
+        <a href="{% url 'evento_lista' %}" class="letra-a">Eventos <span>→</span></a>
+        <a href="{% url 'midia_lista' %}" class="letra-r" class="botao-galeria">Galeria <span>→</span></a>
+        <a href="/admin/" class="letra-t">Admin Django <span>→</span></a>
     </div>
 </section>{% endblock %}

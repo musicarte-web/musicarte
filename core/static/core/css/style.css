@@ -201,6 +201,10 @@ select {
     transform: translateY(-2px)
 }
 
+.text {
+    color: black;
+}
+
 .text-link {
     color: var(--rosa);
     font-weight: 800;
