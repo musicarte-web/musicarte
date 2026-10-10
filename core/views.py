@@ -323,7 +323,7 @@ def crud(model, form, prefix, fields):
 
         type(
             prefix + "Delete",
-            (LoginRequiredMixin, DeleteView),
+            (SafeDeleteView),
             {
                 "model": model,
                 "template_name": "core/confirm_delete.html",
@@ -338,6 +338,20 @@ def crud(model, form, prefix, fields):
         ),
     )
 
+class SafeDeleteView(LoginRequiredMixin, DeleteView):
+    def form_valid(self, form):
+        response = super().form_valid(form)
+
+        messages.success(
+            self.request,
+            "Registro excluído com sucesso."
+        )
+
+        response["Cache-Control"] = "no-store, no-cache, must-revalidate, max-age=0"
+        response["Pragma"] = "no-cache"
+        response["Expires"] = "0"
+
+        return response
 
 AlunoList, AlunoCreate, AlunoUpdate, AlunoDelete = crud(
     Aluno,
