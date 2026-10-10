@@ -35,7 +35,7 @@ html {
 
 body {
     margin: 0;
-    background: var(--fundo);
+    background: var(--aqua);
     color: var(--ink);
     font-family: 'DM Sans', sans-serif
 }
