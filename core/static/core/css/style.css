@@ -1199,7 +1199,7 @@ select {
 }
 
 .stats div {
-    background: var(--cream);
+    background: var(--white);
     border: 1px solid var(--line);
     padding: 22px;
     border-radius: 15px
@@ -1211,6 +1211,37 @@ select {
     font-size: 34px
 }
 
+.stats .btn-al {
+    color: var(--aqua);
+}
+
+.stats .btn-i {
+    color: var(--azulmed);
+}
+
+.stats .btn-o {
+    color: var(--azulvib);
+}
+
+.stats .btn-m {
+    color: var(--roxo);
+}
+
+.stats .btn-au {
+    color: var(--lilas);
+}
+
+.stats .btn-e {
+    color: var(--rosa);
+}
+
+.stats .btn-g {
+    color: var(--vermelho);
+    grid-column: 1 / 3;
+    width: 50%;
+    justify-self: center;
+}
+
 .dash-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -1220,7 +1251,7 @@ select {
 .dash-grid a {
     padding: 22px;
     border-radius: 14px;
-    background-color: var(--cream);
+    background-color: var(--white);
     font-weight: 700;
     display: flex;
     justify-content: space-between
