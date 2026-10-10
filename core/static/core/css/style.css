@@ -351,6 +351,7 @@ select {
 }
 
 .art-strip>div {
+    color: var(--ink);
     text-align: center;
     display: flex;
     flex-direction: column;
