@@ -34,7 +34,7 @@ html {
 
 body {
     margin: 0;
-    background: var(--ciano);
+    background: #9698B8;
     color: var(--ink);
     font-family: 'DM Sans', sans-serif
 }
@@ -187,13 +187,13 @@ select {
     transition: .2s
 }
 
-.btn.coral {
+.btn.oficinas {
     background: var(--roxo);
     color: #fff;
 }
 
-.btn.outline {
-    border: 1px solid #aaa5b6;
+.btn.sobre {
+    border: 2px solid var(--roxo);
     background: rgba(255, 255, 255, .3)
 }
 
