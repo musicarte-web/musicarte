@@ -168,7 +168,7 @@ select {
 
 .kicker {
     display: inline-block;
-    color: var(--rosa);
+    color: var(--lilas);
     font-size: 10px;
     font-weight: 800;
     letter-spacing: .21em
@@ -347,8 +347,8 @@ select {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 15px;
-    background: linear-gradient(90deg, rgba(91, 75, 219, .07), rgba(255, 95, 109, .06), rgba(255, 198, 87, .08), rgba(32, 191, 169, .07));
-    border-block: 1px solid rgba(25, 23, 44, .04)
+    background: var(--roxo;
+    border-block: 3px solid var(--ink)
 }
 
 .art-strip>div {
