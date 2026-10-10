@@ -1259,37 +1259,37 @@ select {
 
 .dash-grid .btn-al{
     color: var(--aqua);
-    border-color: var(--aqua);
+    border: 2px solid var(--aqua);
 }
 
 .dash-grid .btn-i {
     color: var(--azulmed);
-    border-color: var(--azulmed);
+    border: 2px solid var(--azulmed);
 }
 
 .dash-grid .btn-o {
     color: var(--azulvib);
-    border-color: var(--azulvib);
+    border: 2px solid var(--azulvib);
 }
 
 .dash-grid .btn-m {
     color: var(--roxo);
-    border-color: var(--roxo);
+    border: 2px solid var(--roxo);
 }
 
 .dash-grid .btn-au {
     color: var(--lilas);
-    border-color: var(--lilas);
+    border: 2px solid var(--lilas);
 }
 
 .dash-grid .btn-e {
     color: var(--rosa);
-    border-color: var(--rosa);
+    border: 2px solid var(--rosa);
 }
 
 .dash-grid .btn-g {
     color: var(--vermelho);
-    border-color: var(--vermelho);
+    border: 2px solid var(--vermelho);
     grid-column: 1 / 3;
     width: 50%;
     justify-self: center;
