@@ -205,6 +205,10 @@ select {
     color: black;
 }
 
+.text-home {
+    color: var(--azulesc);
+}
+
 .text-link {
     color: var(--rosa);
     font-weight: 800;
