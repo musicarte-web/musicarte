@@ -205,7 +205,7 @@ select {
     color: black;
 }
 
-.text-home {
+.hero-copy.text-home {
     color: var(--azulesc);
 }
 
