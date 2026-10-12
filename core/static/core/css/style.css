@@ -159,17 +159,14 @@ select {
 .main-nav.mobile-open {
     flex-direction: column;
     align-items: stretch;
-    border: 3px solid var(--roxo);
     gap: 10px;
-}
-
-.main-nav.mobile-open a {
-    color: var(--ink);
 }
 
 .main-nav.mobile-open>a:not(.nav-pill) {
     padding: 10px;
     border-radius: 12px;
+    border: 3px solid var(--roxo);
+    color: var(--ink);
     transition: .2s;
 }
 
