@@ -157,6 +157,7 @@ select {
 }
 
 .main-nav.mobile-open {
+    color: var(--ink);
     flex-direction: column;
     align-items: stretch;
     gap: 10px;
