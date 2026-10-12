@@ -151,7 +151,7 @@ select {
 
 .main-nav>a:not(.nav-pill):hover {
     padding: 10px 17px;
-    border-radius: 8px;
+    border-radius: 12px;
     color: var(--rosa);
     background-color: var(--fundo4);
 }
@@ -164,7 +164,7 @@ select {
 
 .main-nav.mobile-open>a:not(.nav-pill) {
     padding: 10px;
-    border-radius: 8px;
+    border-radius: 12px;
     transition: .2s;
 }
 
