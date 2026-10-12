@@ -150,6 +150,24 @@ select {
 }
 
 .main-nav>a:not(.nav-pill):hover {
+    padding: 10px 17px;
+    color: var(--rosa);
+    background-color: var(--fundo4);
+}
+
+.main-nav.mobile-open {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+}
+
+.main-nav.mobile-open>a:not(.nav-pill) {
+    padding: 10px;
+    border-radius: 8px;
+    transition: .2s;
+}
+
+.main-nav.mobile-open>a:not(.nav-pill):hover {
     color: var(--rosa);
     background-color: var(--fundo4);
 }
