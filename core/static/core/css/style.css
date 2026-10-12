@@ -23,6 +23,7 @@
     --fundo: #B8B4D9;
     --fundo2: rgba(255, 255, 255, .3);
     --fundo3: rgba(255, 255, 255, .7);
+    --fundo4: #53d1d880 ;
 }
 
 * {
@@ -149,7 +150,8 @@ select {
 }
 
 .main-nav>a:not(.nav-pill):hover {
-    color: var(--rosa)
+    color: var(--rosa);
+    background-color: var(--fundo4);
 }
 
 .nav-pill {
@@ -1243,7 +1245,7 @@ select {
 .dash-grid a {
     padding: 22px;
     border-radius: 14px;
-    background-color: var(--fundo2);
+    background-color: var(--fundo3);
     font-weight: 700;
     display: flex;
     justify-content: space-between
