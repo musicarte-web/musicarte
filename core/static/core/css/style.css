@@ -21,8 +21,8 @@
     --vermelhoviv: #F21C28;
 
     --fundo: #B8B4D9;
-    --fundo2: rgba(255, 255, 255, .5);
-    --fundo3: rgba(255, 255, 255, .3);
+    --fundo2: rgba(255, 255, 255, .3);
+    --fundo3: rgba(255, 255, 255, .7);
 }
 
 * {
@@ -1192,7 +1192,7 @@ select {
 }
 
 .stats div {
-    background: var(--white);
+    background: var(--fundo2);
     border: 1px solid var(--line);
     padding: 22px;
     border-radius: 15px
@@ -1243,7 +1243,7 @@ select {
 .dash-grid a {
     padding: 22px;
     border-radius: 14px;
-    background-color: var(--white);
+    background-color: var(--fundo2);
     font-weight: 700;
     display: flex;
     justify-content: space-between
@@ -1458,7 +1458,7 @@ th {
         right: 18px;
         top: 67px;
         padding: 18px;
-        background: var(--fundo2);
+        background: var(--fundo3);
         border: 2px solid var(--roxo);
         border-radius: 15px;
         flex-direction: column;
