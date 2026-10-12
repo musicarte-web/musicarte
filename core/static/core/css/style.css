@@ -21,7 +21,8 @@
     --vermelhoviv: #F21C28;
 
     --fundo: #B8B4D9;
-    --fundo2: rgba(255, 255, 255, .3);
+    --fundo2: rgba(255, 255, 255, .5);
+    --fundo3: rgba(255, 255, 255, .3);
 }
 
 * {
