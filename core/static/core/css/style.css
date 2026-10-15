@@ -2318,15 +2318,6 @@ th {
         display: block !important;
     }
 
-    /* LINKS DO MENU MOBILE */
-    .main-nav.open>a:not(.nav-pill) {
-        padding: 10px;
-        border: 3px solid var(--roxo);
-        border-radius: 12px;
-        color: #B8B4D9 !important;
-        background-color: transparent;
-    }
-
     /* HOVER */
     .main-nav.open>a:not(.nav-pill):hover {
         color: var(--rosa) !important;
