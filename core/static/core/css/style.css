@@ -148,14 +148,21 @@ select {
 /* DESKTOP */
 
 .main-nav>a:not(.nav-pill) {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 16px;
+    border: 2px solid transparent;
+    border-radius: 12px;
+    text-decoration: none;
     transition: .2s;
 }
 
 .main-nav>a:not(.nav-pill):hover {
     color: var(--rosa);
     background-color: var(--fundo4);
+    border-color: var(--roxo);
 }
-
 
 /* MOBILE */
 
