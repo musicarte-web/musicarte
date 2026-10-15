@@ -67,43 +67,52 @@
             ☰
         </button>
         
-        <nav class="main-nav">
-        
-            <a href="{% url 'home' %}">
-                Início
-            </a>
-        
-            <a href="{% url 'sobre' %}">
-                Sobre
-            </a>
-        
-            <a href="{% url 'cursos' %}">
-                Oficinas
-            </a>
-        
-            <a href="{% url 'eventos' %}">
-                Eventos
-            </a>
-        
-            <a href="{% url 'galeria' %}">
-                Galeria
-            </a>
-        
-            <a href="{% url 'equipe' %}">
-                Equipe
-            </a>
-        
-            {% if user.is_authenticated %}
-            <a class="nav-pill" href="{% url 'painel' %}">
-                Painel
-            </a>
-            {% else %}
-            <a class="nav-pill" href="{% url 'login' %}">
-                Entrar
-            </a>
-            {% endif %}
-        
-        </nav>
+<nav class="main-nav">
+
+    <a href="{% url 'home' %}"
+       class="{% if request.resolver_match.url_name == 'home' %}active{% endif %}">
+        Início
+    </a>
+
+    <a href="{% url 'sobre' %}"
+       class="{% if request.resolver_match.url_name == 'sobre' %}active{% endif %}">
+        Sobre
+    </a>
+
+    <a href="{% url 'cursos' %}"
+       class="{% if request.resolver_match.url_name == 'cursos' %}active{% endif %}">
+        Oficinas
+    </a>
+
+    <a href="{% url 'eventos' %}"
+       class="{% if request.resolver_match.url_name == 'eventos' %}active{% endif %}">
+        Eventos
+    </a>
+
+    <a href="{% url 'galeria' %}"
+       class="{% if request.resolver_match.url_name == 'galeria' %}active{% endif %}">
+        Galeria
+    </a>
+
+    <a href="{% url 'equipe' %}"
+       class="{% if request.resolver_match.url_name == 'equipe' %}active{% endif %}">
+        Equipe
+    </a>
+
+    {% if user.is_authenticated %}
+        <a class="nav-pill {% if request.resolver_match.url_name == 'painel' %}active{% endif %}"
+           href="{% url 'painel' %}">
+            Painel
+        </a>
+    {% else %}
+        <a class="nav-pill {% if request.resolver_match.url_name == 'login' %}active{% endif %}"
+           href="{% url 'login' %}">
+            Entrar
+        </a>
+    {% endif %}
+
+</nav>
+
 
     </header>
 
