@@ -2299,9 +2299,11 @@ th {
     .main-nav.open {
         display: flex !important;
         position: absolute;
-        left: 18px;
-        right: 18px;
+        left: 0;
+        right: 0;
         top: 67px;
+        width: 100%;
+        box-sizing: border-box;
 
         padding: 18px;
         background: var(--fundo3);
