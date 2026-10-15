@@ -5,11 +5,11 @@
     --yellow: #ffc657;
     --aqua: #20bfa9;
     --cream: #fff9f3;
-    --ink: #19172c;
     --muted: #a9a4bc;
     --line: #eae4e1;
     --white: #fff;
 
+    --ink: #1f1c3a;
     --ciano: #52D1D7;
     --azulmed: #3792C9;
     --azulvib: #3684DF;
@@ -22,8 +22,8 @@
 
     --fundo: #B8B4D9;
     --fundo2: rgba(255, 255, 255, .3);
-    --fundo3: rgba(255, 255, 255, .85);
-    --fundo4: #7545B880;
+    --fundo3: rgb(208, 209, 209);
+    --fundo4: #dddddd80;
 }
 
 * {
@@ -185,7 +185,7 @@ select {
 
         padding: 18px;
         background: var(--fundo3);
-        border: 1px solid var(--roxo);
+        border: 3px solid var(--roxo);
         border-radius: 15px;
 
         flex-direction: column;
@@ -199,7 +199,7 @@ select {
 
     .main-nav.open>a:not(.nav-pill) {
         padding: 10px;
-        border: 3px solid var(--roxo);
+        border: 1px solid var(--roxo);
         border-radius: 12px;
         color: var(--ink) !important;
         background-color: transparent;
