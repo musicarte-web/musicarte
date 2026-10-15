@@ -184,6 +184,7 @@ select {
         display: none;
 
         padding: 18px;
+        color: var(--ink);
         background: var(--fundo3);
         border: 1px solid var(--roxo);
         border-radius: 15px;
@@ -211,16 +212,7 @@ select {
         border-color: var(--rosa);
     }
 
-    /* LINK DA PÁGINA ATUAL NO MENU MOBILE */
     .main-nav.open>a.active:not(.nav-pill) {
-        background-color: var(--roxo);
-        color: var(--white) !important;
-        border-color: var(--rosa);
-    }
-
-    /* HOVER DO LINK ATIVO */
-    .main-nav.open>a.active:not(.nav-pill):hover {
-        background-color: var(--fundo4);
         color: var(--rosa) !important;
         border-color: var(--rosa);
     }
