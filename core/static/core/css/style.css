@@ -145,7 +145,6 @@ select {
     font-weight: 700;
 }
 
-
 /* DESKTOP */
 
 .main-nav>a:not(.nav-pill) {
@@ -157,19 +156,46 @@ select {
     background-color: var(--fundo4);
 }
 
-.main-nav.mobile-open>a:not(.nav-pill) {
-    padding: 10px !important;
-    border-radius: 12px !important;
-    border: 3px solid var(--roxo) !important;
-    color: #B8B4D9 !important;
-    background-color: transparent !important;
-    transition: .2s;
-}
+@media(max-width:900px) {
 
-.main-nav.mobile-open>a:not(.nav-pill):hover {
-    color: var(--rosa) !important;
-    background-color: var(--fundo4) !important;
-    border-color: var(--rosa) !important;
+    .main-nav {
+        display: none;
+        position: absolute;
+        left: 18px;
+        right: 18px;
+        top: 67px;
+        padding: 18px;
+        background: var(--fundo3);
+        border: 2px solid var(--roxo);
+        border-radius: 15px;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 10px;
+    }
+
+    /* É o OPEN que faz o menu aparecer */
+    .main-nav.open {
+        display: flex;
+    }
+
+    /* Aparência dos links no celular */
+    .main-nav.open>a:not(.nav-pill) {
+        padding: 10px;
+        border: 3px solid var(--roxo);
+        border-radius: 12px;
+        color: #B8B4D9 !important;
+        background-color: transparent;
+    }
+
+    .main-nav.open>a:not(.nav-pill):hover {
+        color: var(--rosa) !important;
+        background-color: var(--fundo4);
+        border-color: var(--rosa);
+    }
+
+    .menu-btn {
+        display: block;
+    }
 }
 
 .nav-pill {
@@ -1469,43 +1495,6 @@ th {
     color: #777184;
     font-size: 10px
 }
-
-@media(max-width:900px) {
-
-    .main-nav {
-        display: none;
-        position: absolute;
-        left: 18px;
-        right: 18px;
-        top: 67px;
-        padding: 18px;
-        background: var(--fundo3);
-        border: 2px solid var(--roxo);
-        border-radius: 15px;
-        flex-direction: column;
-        align-items: stretch;
-    }
-
-    .main-nav.mobile-open {
-        display: flex;
-    }
-
-    .main-nav.mobile-open>a:not(.nav-pill) {
-        color: #B8B4D9 !important;
-        padding: 10px;
-        border: 3px solid var(--roxo);
-        border-radius: 12px;
-    }
-
-    .main-nav.mobile-open>a:not(.nav-pill):hover {
-        color: var(--rosa) !important;
-        background-color: var(--fundo4);
-        border-color: var(--rosa);
-    }
-
-    .menu-btn {
-        display: block;
-    }
 
     .home-hero,
     .inner-hero,
