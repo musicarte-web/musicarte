@@ -2268,3 +2268,13 @@ th {
         width: 100%;
     }
 }
+
+@media (max-width: 900px) {
+    .main-nav {
+        display: none !important;
+    }
+
+    .main-nav.open {
+        display: flex !important;
+    }
+}
