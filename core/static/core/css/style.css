@@ -2273,8 +2273,4 @@ th {
     .main-nav {
         display: none !important;
     }
-
-    .main-nav.open {
-        display: flex !important;
-    }
 }
