@@ -142,20 +142,20 @@ select {
     align-items: center;
     gap: 26px;
     font-size: 13px;
-    font-weight: 700
+    font-weight: 700;
 }
 
 .main-nav>a:not(.nav-pill) {
-    transition: .2s
+    transition: .2s;
 }
 
 .main-nav>a:not(.nav-pill):hover {
-    padding: 10px 17px;
-    border-radius: 12px;
     color: var(--rosa);
     background-color: var(--fundo4);
 }
 
+
+/* MENU MOBILE */
 .main-nav.mobile-open {
     flex-direction: column;
     align-items: stretch;
@@ -173,6 +173,7 @@ select {
 .main-nav.mobile-open>a:not(.nav-pill):hover {
     color: var(--rosa);
     background-color: var(--fundo4);
+    border-color: var(--rosa);
 }
 
 .nav-pill {
