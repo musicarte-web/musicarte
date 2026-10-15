@@ -2306,9 +2306,8 @@ th {
         box-sizing: border-box;
 
         padding: 18px;
-        background: var(--fundo3);
+        background: var(--ink);
         border: 2px solid var(--roxo);
-        border-radius: 15px;
 
         flex-direction: column;
         align-items: stretch;
