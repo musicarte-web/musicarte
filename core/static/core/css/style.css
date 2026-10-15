@@ -23,7 +23,7 @@
     --fundo: #B8B4D9;
     --fundo2: rgba(255, 255, 255, .3);
     --fundo3: rgba(255, 255, 255, .7);
-    --fundo4: #53d1d880 ;
+    --fundo4: #7545B880;
 }
 
 * {
@@ -148,9 +148,6 @@ select {
 /* DESKTOP */
 
 .main-nav>a:not(.nav-pill) {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
     padding: 10px 16px;
     border: 2px solid transparent;
     border-radius: 12px;
