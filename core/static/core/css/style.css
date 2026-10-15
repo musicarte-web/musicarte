@@ -22,7 +22,7 @@
 
     --fundo: #B8B4D9;
     --fundo2: rgba(255, 255, 255, .3);
-    --fundo3: rgba(255, 255, 255, .7);
+    --fundo3: rgba(255, 255, 255, .85);
     --fundo4: #7545B880;
 }
 
@@ -185,7 +185,7 @@ select {
 
         padding: 18px;
         background: var(--fundo3);
-        border: 2px solid var(--roxo);
+        border: 1px solid var(--roxo);
         border-radius: 15px;
 
         flex-direction: column;
@@ -201,7 +201,7 @@ select {
         padding: 10px;
         border: 3px solid var(--roxo);
         border-radius: 12px;
-        color: #B8B4D9;
+        color: var(--ink);
         background-color: transparent;
     }
 
