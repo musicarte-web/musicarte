@@ -160,6 +160,20 @@ select {
     border-color: var(--roxo);
 }
 
+/* BOTÃO DA PÁGINA ATUAL */
+.main-nav>a.active {
+    background-color: var(--roxo);
+    color: var(--white);
+    border-color: var(--roxo);
+}
+
+/* HOVER NA PÁGINA ATUAL */
+.main-nav>a.active:hover {
+    background-color: var(--rosa);
+    color: var(--white);
+    border-color: var(--rosa);
+}
+
 /* MOBILE */
 
 @media (max-width: 900px) {
