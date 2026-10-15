@@ -184,7 +184,6 @@ select {
         display: none;
 
         padding: 18px;
-        color: var(--ink);
         background: var(--fundo3);
         border: 1px solid var(--roxo);
         border-radius: 15px;
@@ -202,7 +201,7 @@ select {
         padding: 10px;
         border: 3px solid var(--roxo);
         border-radius: 12px;
-        color: var(--ink);
+        color: var(--ink); !important
         background-color: transparent;
     }
 
