@@ -139,6 +139,7 @@ select {
 .main-nav {
     color: var(--white);
     display: flex;
+    align-items: center;
     gap: 26px;
     font-size: 13px;
     font-weight: 700;
@@ -147,14 +148,13 @@ select {
 /* DESKTOP */
 
 .main-nav>a:not(.nav-pill) {
-    padding: 10px 16px;
-    border: 2px solid transparent;
+    
     border-radius: 12px;
-    text-decoration: none;
     transition: .2s;
 }
 
 .main-nav>a:not(.nav-pill):hover {
+    padding: 6px 12px;
     color: var(--rosa);
     background-color: var(--fundo4);
     border-color: var(--roxo);
