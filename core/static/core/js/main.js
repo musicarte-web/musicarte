@@ -1,5 +1,6 @@
 const btn = document.querySelector('.menu-btn');
 const nav = document.querySelector('.main-nav');
+const open = nav.classList.toggle('open');
 
 if (btn && nav) {
     btn.addEventListener('click', () => {
