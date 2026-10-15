@@ -139,7 +139,6 @@ select {
 .main-nav {
     color: var(--white);
     display: flex;
-    align-items: center;
     gap: 26px;
     font-size: 13px;
     font-weight: 700;
