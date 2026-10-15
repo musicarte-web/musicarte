@@ -156,22 +156,19 @@ select {
 .main-nav>a:not(.nav-pill):hover {
     padding: 6px 12px;
     color: var(--rosa);
-    background-color: var(--fundo4);
-    border-color: var(--roxo);
+    background-color: var(--rosa);
+    color: var(--white);
 }
 
 /* BOTÃO DA PÁGINA ATUAL */
 .main-nav>a.active {
-    background-color: var(--roxo);
-    color: var(--white);
-    border-color: var(--roxo);
+    color: var(--rosa);
 }
 
 /* HOVER NA PÁGINA ATUAL */
 .main-nav>a.active:hover {
     background-color: var(--rosa);
     color: var(--white);
-    border-color: var(--rosa);
 }
 
 /* MOBILE */
