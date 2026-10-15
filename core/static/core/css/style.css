@@ -185,8 +185,6 @@ select {
 
         padding: 18px;
         background: var(--fundo3);
-        border: 5px solid var(--roxo);
-        border-radius: 15px;
 
         flex-direction: column;
         align-items: stretch;
@@ -201,7 +199,7 @@ select {
         padding: 10px;
         border: 2px solid var(--roxo);
         border-radius: 12px;
-        color: var(--ink) !important;
+        color: var(--white);
         background-color: transparent;
     }
 
@@ -2307,7 +2305,6 @@ th {
 
         padding: 18px;
         background: var(--ink);
-        border: 2px solid var(--roxo);
 
         flex-direction: column;
         align-items: stretch;
