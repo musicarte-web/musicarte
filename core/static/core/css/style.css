@@ -495,8 +495,8 @@ select {
 
 
 .workshop-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 250px);
+    display: grid !important;
+    grid-template-columns: repeat(3, 250px) !important;
     gap: 24px;
     justify-content: center;
     align-items: stretch;
