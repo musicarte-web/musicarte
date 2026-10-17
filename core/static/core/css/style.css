@@ -495,14 +495,15 @@ select {
 
 .workshop-grid {
     display: grid;
-    grid-template-columns: repeat(3, minmax(0, 250px));
+    grid-template-columns: repeat(3, 250px);
     gap: 24px;
     justify-content: center;
+    align-items: stretch;
 }
 
 .workshop-card {
-    width: 250px;
-    max-width: 100%;
+    width: 100%;
+    min-width: 0;
     box-sizing: border-box;
     overflow: hidden;
     background: #fff;
