@@ -496,7 +496,7 @@ select {
 .workshop-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 12px
+    gap: 18px
 }
 
 .workshop-card {
@@ -514,7 +514,7 @@ select {
 .workshop-card>img,
 .card-art {
     width: 100%;
-    height: 185px;
+    height: 150px;
     object-fit: cover
 }
 
