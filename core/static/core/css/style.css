@@ -1517,6 +1517,7 @@ th {
     font-size: 10px
 }
 
+@media (max-width: 900px) {
     .home-hero,
     .inner-hero,
     .story,
@@ -1540,6 +1541,7 @@ th {
     .hero-actions {
         justify-content: center
     }
+}
 
     .art-strip {
         grid-template-columns: repeat(2, 1fr)
