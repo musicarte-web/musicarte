@@ -1185,7 +1185,7 @@ select {
 }
 
 .detail-lead {
-    color: var(--muted);
+    color: var(--azulvib);
     font-size: 16px;
     line-height: 1.8
 }
@@ -1204,7 +1204,7 @@ select {
 
 .facts small {
     display: block;
-    color: var(--muted);
+    color: var(--azulvib);
     font-size: 9px;
     letter-spacing: .12em;
     margin-bottom: 5px
