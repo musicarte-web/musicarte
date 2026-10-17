@@ -562,14 +562,14 @@ select {
 }
 
 .card-copy {
-    padding: 20px
+    padding: 15px
 }
 
 .card-copy>small,
 .person-card small {
     color: var(--rosa);
     font-size: 9px;
-    font-weight: 600;
+    font-weight: 800;
     letter-spacing: .16em
 }
 
