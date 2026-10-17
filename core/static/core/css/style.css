@@ -2531,3 +2531,31 @@ th {
         padding: 20px;
     }
 }
+
+.course-detail-image.detail-placeholder {
+    width: 100%;
+    min-width: 0;
+    height: 510px;
+    border-radius: 24px;
+    overflow: hidden;
+}
+
+.course-detail-copy {
+    min-width: 0;
+}
+
+.course-enrollment .btn {
+    flex-wrap: wrap;
+}
+
+@media (max-width: 900px) {
+    .course-detail-image.detail-placeholder {
+        height: 350px;
+    }
+}
+
+@media (max-width: 600px) {
+    .course-detail-image.detail-placeholder {
+        height: 280px;
+    }
+}

@@ -1,79 +1,86 @@
 {% extends "core/base.html" %}
 
 {% block content %}
-<section class="oficina-detalhe">
-    <div class="oficina-container">
+<section class="course-detail">
+    <div class="shell">
 
-        <a href="{% url 'cursos' %}" class="oficina-voltar">
-            ← Voltar para os cursos
+        <a href="{% url 'cursos' %}" class="back-link">
+            ← Voltar para as oficinas
         </a>
 
         {% if messages %}
-        <div class="oficina-mensagens">
+        <div class="messages">
             {% for message in messages %}
-            <div class="mensagem mensagem-{{ message.tags }}">
+            <div class="{{ message.tags }}">
                 {{ message }}
             </div>
             {% endfor %}
         </div>
         {% endif %}
 
-        <article class="oficina-card">
-            <div class="oficina-cabecalho">
-                <span class="oficina-etiqueta">OFICINA</span>
+        <div class="course-detail-grid">
+
+            <div class="course-detail-image detail-placeholder">
+                <span>{{ curso.nome|first|upper }}</span>
+                <small>OFICINA MUSICARTE</small>
+            </div>
+
+            <div class="course-detail-copy">
+                <span class="kicker">CONHEÇA A OFICINA</span>
 
                 <h1>{{ curso.nome }}</h1>
 
-                <p class="oficina-descricao">
-                    Conheça esta oficina e faça sua inscrição.
+                <p class="detail-lead">
+                    Descubra uma nova forma de aprender, criar e se expressar
+                    por meio da música. Confira as vagas e venha participar
+                    desta oficina do Musicarte.
                 </p>
-            </div>
 
-            <div class="oficina-conteudo">
-                <div class="oficina-info">
-                    <h2>Sobre a oficina</h2>
+                <div class="facts">
+                    <div>
+                        <small>OFICINA</small>
+                        <strong>{{ curso.nome }}</strong>
+                    </div>
 
-                    <p>
-                        Confira a disponibilidade de vagas e inscreva-se
-                        para participar desta oficina.
-                    </p>
+                    <div>
+                        <small>VAGAS DISPONÍVEIS</small>
+                        <strong>{{ vagas_disponiveis }}</strong>
+                    </div>
                 </div>
 
-                <div class="oficina-inscricao">
+                <div class="course-enrollment">
                     {% if vagas_disponiveis > 0 %}
-                    <p class="oficina-vagas">
-                        <span class="status-ponto"></span>
-                        {{ vagas_disponiveis }}
+                    <p class="vacancies">
+                        <span class="vacancy-dot"></span>
                         {% if vagas_disponiveis == 1 %}
-                        vaga disponível
+                        Última vaga disponível!
                         {% else %}
-                        vagas disponíveis
+                        Temos {{ vagas_disponiveis }} vagas disponíveis.
                         {% endif %}
                     </p>
 
-                    <a href="{% url 'inscricao_oficina' curso.pk %}" class="btn-inscricao">
+                    <a href="{% url 'inscricao_oficina' curso.pk %}" class="btn oficinas enrollment-button">
                         Inscreva-se nesta oficina
                         <span>→</span>
                     </a>
 
-                    <p class="oficina-aviso">
-                        Preencha seus dados na próxima página para
-                        solicitar sua inscrição.
-                    </p>
+                    <small class="enrollment-note">
+                        Preencha seus dados na próxima página para realizar
+                        sua inscrição.
+                    </small>
                     {% else %}
-                    <p class="oficina-sem-vagas">
-                        No momento, não há vagas disponíveis.
+                    <p class="no-vacancies">
+                        No momento, não há vagas disponíveis nesta oficina.
                     </p>
 
-                    <a href="{% url 'cursos' %}" class="btn-inscricao">
-                        Ver outros cursos
-                        <span>→</span>
+                    <a href="{% url 'cursos' %}" class="btn sobre">
+                        Ver outras oficinas →
                     </a>
                     {% endif %}
                 </div>
             </div>
-        </article>
 
+        </div>
     </div>
 </section>
 {% endblock %}
