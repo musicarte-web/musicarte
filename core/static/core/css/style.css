@@ -493,6 +493,7 @@ select {
     line-height: 1.65
 }
 
+
 .workshop-grid {
     display: grid;
     grid-template-columns: repeat(3, 250px);
@@ -511,6 +512,7 @@ select {
     border-radius: 18px;
     transition: .22s;
 }
+
 
 .workshop-card img {
     width: 100%;
