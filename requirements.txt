@@ -11,3 +11,4 @@ django-filter==26.1
 django-localflavor==4.0
 django-multiselectfield==0.1.13
 django-recaptcha==4.0.0
+pillow
