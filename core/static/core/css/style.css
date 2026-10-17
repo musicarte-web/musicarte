@@ -529,12 +529,12 @@ select {
     object-fit: cover
 }
 
-@media (max-width: 800px) {
+/*@media (max-width: 800px) {
     .workshops-grid {
         grid-template-columns: repeat(2, minmax(0, 250px));
         gap: 16px;
     }
-}
+}*/
 
 @media (max-width: 550px) {
     .workshops-grid {
