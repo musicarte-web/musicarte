@@ -1,72 +1,78 @@
-{% extends 'core/base.html' %}
-{% load static %}
+{% extends "core/base.html" %}
 
 {% block content %}
 <section class="oficina-detalhe">
-
-    <div class="oficina-imagem">
-        {% if oficina.imagem %}
-        <img src="{{ oficina.imagem.url }}" alt="{{ oficina.nome }}">
-        {% else %}
-        <div class="oficina-imagem-placeholder">
-            <span>MusicArte</span>
-        </div>
-        {% endif %}
-    </div>
-
-    <div class="oficina-conteudo">
-
-        <span class="oficina-etiqueta">OFICINA</span>
-
-        <h1>{{ oficina.nome }}</h1>
-
-        <p class="oficina-subtitulo">
-            {{ oficina.descricao|default:"Conheça esta oficina e venha aprender música conosco." }}
-        </p>
-
-        <div class="oficina-informacoes">
-
-            <div class="oficina-info">
-                <span>INSTRUTOR(A)</span>
-                <strong>{{ oficina.instrutor|default:"A definir" }}</strong>
-            </div>
-
-            <div class="oficina-info">
-                <span>HORÁRIO</span>
-                <strong>{{ oficina.horario|default:"A definir" }}</strong>
-            </div>
-
-            <div class="oficina-info">
-                <span>CARGA HORÁRIA</span>
-                <strong>{{ oficina.carga_horaria|default:"A definir" }}</strong>
-            </div>
-
-            <div class="oficina-info">
-                <span>LOCAL</span>
-                <strong>{{ oficina.local|default:"IFPR – Campus Paranavaí" }}</strong>
-            </div>
-
-        </div>
-
-        <div class="oficina-inscricao">
-            <p class="oficina-vagas">
-                <span class="status-ponto"></span>
-                {{ oficina.vagas_disponiveis|default:"20" }} vagas disponíveis
-            </p>
-
-            <a href="{% url 'inscricao_oficina' oficina.pk %}" class="btn-inscricao">
-                Inscreva-se nesta oficina
-                <span>→</span>
-            </a>
-
-            <p class="oficina-aviso">
-                Preencha seus dados para solicitar sua inscrição.
-            </p>
-        </div>
+    <div class="oficina-container">
 
         <a href="{% url 'cursos' %}" class="oficina-voltar">
-            ← Voltar às oficinas
+            ← Voltar para os cursos
         </a>
+
+        {% if messages %}
+        <div class="oficina-mensagens">
+            {% for message in messages %}
+            <div class="mensagem mensagem-{{ message.tags }}">
+                {{ message }}
+            </div>
+            {% endfor %}
+        </div>
+        {% endif %}
+
+        <article class="oficina-card">
+            <div class="oficina-cabecalho">
+                <span class="oficina-etiqueta">OFICINA</span>
+
+                <h1>{{ curso.nome }}</h1>
+
+                <p class="oficina-descricao">
+                    Conheça esta oficina e faça sua inscrição.
+                </p>
+            </div>
+
+            <div class="oficina-conteudo">
+                <div class="oficina-info">
+                    <h2>Sobre a oficina</h2>
+
+                    <p>
+                        Confira a disponibilidade de vagas e inscreva-se
+                        para participar desta oficina.
+                    </p>
+                </div>
+
+                <div class="oficina-inscricao">
+                    {% if vagas_disponiveis > 0 %}
+                    <p class="oficina-vagas">
+                        <span class="status-ponto"></span>
+                        {{ vagas_disponiveis }}
+                        {% if vagas_disponiveis == 1 %}
+                        vaga disponível
+                        {% else %}
+                        vagas disponíveis
+                        {% endif %}
+                    </p>
+
+                    <a href="{% url 'inscricao_oficina' curso.pk %}" class="btn-inscricao">
+                        Inscreva-se nesta oficina
+                        <span>→</span>
+                    </a>
+
+                    <p class="oficina-aviso">
+                        Preencha seus dados na próxima página para
+                        solicitar sua inscrição.
+                    </p>
+                    {% else %}
+                    <p class="oficina-sem-vagas">
+                        No momento, não há vagas disponíveis.
+                    </p>
+
+                    <a href="{% url 'cursos' %}" class="btn-inscricao">
+                        Ver outros cursos
+                        <span>→</span>
+                    </a>
+                    {% endif %}
+                </div>
+            </div>
+        </article>
 
     </div>
 </section>
