@@ -496,7 +496,7 @@ select {
 .workshop-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 18px
+    gap: 12px
 }
 
 .workshop-card {
